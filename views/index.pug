@@ -4,4 +4,122 @@ block hero
 block navigation
     include includes/navigation
 block content
-    
+    //- Begin Abouts Section
+    .uk-section.uk-section-primary
+        //- Begin About Section Container
+        .uk-container
+            //- Begin About Section Grid
+            div(class="uk-child-width-1-3@m uk-grid-match" uk-grid)
+                //- About Card #1 A Bit About Therapy
+                div
+                    .uk-card.uk-card-secondary(uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5")
+                        .uk-card-media-top
+                            img(src="images/about-therapy.jpg" alt="Image of tree trunk with young sprouts apearing")
+                        .uk-card-header
+                            h2.h3.uk-card-title A Bit About Therapy
+                        .uk-card-body
+                            p
+                                | At Rooted Psychotherapy and Counseling, we implement effective psychotherapy 
+                                | methods to instill self-understanding among patients and encourage them to adopt 
+                                | new attitudes and feelings towards life situations. Our services are personalized 
+                                | to suit everyone’s needs, and we go the extra mile to provide you with all the 
+                                | tools you need to feel better.
+                //- About Card #2 About Us
+                div
+                    .uk-card.uk-card-secondary(uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5")
+                        .uk-card-media-top
+                            img(src="images/about-us.jpg" alt="Image of a group of friends staring at the horizon with the sun in the distance")
+                        .uk-card-header
+                            h2.h3.uk-card-title About Us
+                        .uk-card-body
+                            p
+                                | Since opening the doors of our practice in 2014, we have had the privilege 
+                                | of providing people in the tri-state area with a wide range of psychological
+                                | services. Life can be overwhelming and sometimes even exhausting and we're 
+                                | here to guide you through those obstacles. At Rooted Psychotherapy and Counseling,
+                                | our goal is to help you understand yourself more deeply through the psychotherapy 
+                                | experience, and get you back on track.
+                //- About Card #3 About Insurance
+                div
+                    .uk-card.uk-card-secondary(uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5")
+                        .uk-card-media-top
+                            img(src="images/about-insurance.jpg" alt="Image of two people holding hands")
+                        .uk-card-header
+                            h2.h3.uk-card-title About Insurance
+                        .uk-card-body
+                            p
+                                | At Rooted Psychotherapy and Counseling, we implement effective psychotherapy
+                                | methods to instill self-understanding among patients and encourage them to
+                                | adopt new attitudes and feelings towards life situations. Our services are
+                                | personalized to suit everyone’s needs, and we go the extra mile to provide you
+                                | with all the tools you need to feel better.
+    //- End Abouts Section
+    //- Begin Services Section
+    #services.uk-section.uk-section-secondary
+        header.uk-text-center
+            p.h6 Helping You Feel Better
+            h2.h1 Services We Offer
+        .uk-container
+            div(class="uk-child-width-1-2@m uk-child-width-1-3@l uk-text-center" uk-grid)
+                div
+                    .uk-card.uk-card-primary.uk-card-hover(uk-parallax="opacity: 0.3,1; y: 100,0; viewport: 0.5")
+                        .uk-card-body
+                            h3.uk-card-title Couples Therapy
+                        .uk-card-media-bottom
+                            img(src="images/couples-therapy.jpg" alt="Image of couple silhouetted against the sky looking out at the ocean")
+                div
+                    .uk-card.uk-card-primary.uk-card-hover(uk-parallax="opacity: 0.3,1; y: 100,0; viewport: 0.5")
+                        .uk-card-body
+                            h3.uk-card-title Family Therapy
+                        .uk-card-media-bottom
+                            img(src="images/family-therapy.jpg" alt="Image of family running in a field")
+                div
+                    .uk-card.uk-card-primary.uk-card-hover(uk-parallax="opacity: 0.3,1; y: 100,0; viewport: 0.5")
+                        .uk-card-body
+                            h3.uk-card-title Individual Therapy
+                        .uk-card-media-bottom
+                            img(src="images/individual-therapy.jpg" alt="Image of woman blowing dandelion seeds")
+                div
+                    .uk-card.uk-card-primary.uk-card-hover(uk-parallax="opacity: 0.3,1; y: 100,0; viewport: 0.5")
+                        .uk-card-body
+                            h3.uk-card-title Therapy Groups
+                        .uk-card-media-bottom
+                            img(src="images/therapy-groups.jpg" alt="Image of diverse friends sitting outside")
+                div
+                    .uk-card.uk-card-primary.uk-card-hover(uk-parallax="opacity: 0.3,1; y: 100,0; viewport: 0.5")
+                        .uk-card-body
+                            h3.uk-card-title Clinical Supervision
+                        .uk-card-media-bottom
+                            img(src="images/clinical-supervision.jpg" alt="Image of sunset in distance")
+                div
+                    .uk-card.uk-card-primary.uk-card-hover(uk-parallax="opacity: 0.3,1; y: 100,0; viewport: 0.5")
+                        .uk-card-body
+                            h3.uk-card-title Peer Supervision
+                        .uk-card-media-bottom
+                            img(src="images/peer-supervision.jpg" alt="Image of a group of people putting their hands in a circle")
+    //- End Services Section
+    //- Begin Hours and Locations
+    #hours.uk-section.uk-section-muted
+        header.uk-text-center
+            p.h6 When and Where to Find Us
+            h2.h1 Office Hours &amp; Locations
+        .uk-container
+            div(class="uk-child-width-1-2@m" uk-grid)
+                div
+                    div.uk-card(uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5")
+                        .uk-card-body
+                            h3.uk-card-title Hours
+                            p
+                                | We are proud to offer morning, afternoon, evening and weekend hours.
+                                | Each therapist will work with individuals to tailor a therapy schedule
+                                | that is sustainable.
+                div
+                    div.uk-card(uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5")
+                        .uk-card-body
+                            h3.uk-card-title Locations
+                            p
+                                | We are proud to offer morning, afternoon, evening and weekend hours.
+                                | Each therapist will work with individuals to tailor a therapy schedule
+                                | that is sustainable.
+block footer
+    include includes/footer

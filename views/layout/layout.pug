@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    include includes/meta
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    include includes/offcanvas
+    block hero
+    block navigation
+    block content
+    include includes/scripts

@@ -1,0 +1,10 @@
+//- extends layout/layout
+html
+  head
+    link(href="/stylesheets/error.css", rel="stylesheet")
+    script(src="https://kit.fontawesome.com/ee7bf5db15.js")
+  body
+    block content
+    h1= error.status
+    h2= message
+    pre #{error.stack}

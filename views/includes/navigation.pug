@@ -1,0 +1,15 @@
+//-  Begin Sticky Navigation
+#sticky-nav(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: transparent-sticky-navbar")
+    .uk-container
+        nav.uk-navbar-container.uk-navbar-transparent(uk-navbar style="position: relative; z-index: 980;")
+            //- Begin Navbar Left
+            .uk-navbar-left
+                ul.uk-navbar-nav
+                    li(class="uk-visible@m")
+                        a.uk-navbar-item.uk-logo(href="/") Rooted Psychotherapy &amp; Counseling
+            //- End Navbar Left
+            //- Begin Navbar Right
+            .uk-navbar-right
+                ul.uk-navbar-nav
+                    li(class="uk-visible@m uk-active")
+                        a(href="#") Home

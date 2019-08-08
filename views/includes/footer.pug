@@ -1,0 +1,25 @@
+//- Begin Site Footer
+footer#site-footer.uk-section
+    .uk-container
+        div(class="uk-child-width-1-3@m" uk-grid)
+            .uk-text-center
+                img(src="images/rooted-psychotherapy-logo-small.png" alt="" width="50px")
+                .uk-grid-small.uk-child-width-auto.uk-flex-inline(uk-grid)
+                    a.uk-icon(href="https://www.facebook.com/rootedpsychotherapyorg/" uk-icon="icon: facebook")
+                    a.uk-icon(href="https://www.instagram.com/rootedpsychotherapy/" uk-icon="icon: instagram")
+                    a.uk-icon(href="#" uk-icon="icon: mail")
+                    a.uk-icon(href="tel:1-856-375-2440" uk-icon="icon: receiver")
+            .uk-text-center
+                ul.menu.vertical
+                    li
+                        a(href="/privacy") Privacy Policy
+                    li
+                        a(href="#") Terms of Service
+            .uk-text-center
+                -
+                    var now = new Date
+                    var theYear = now.getYear()
+                    if (theYear < 1900)
+                    theYear = theYear+1900
+                p &copy; Copyright #{theYear}
+                p Rooted Psychotherapy &amp; Counseling, LLC                    

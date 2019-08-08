@@ -1,6 +1,3 @@
 node_modules
-# Ignore all files in the public/images directory
-public/images/*
-# Don't ignore the .gitkeep file
 !.gitkeep
 .DS_Store

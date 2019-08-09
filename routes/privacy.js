@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   if(req.baseUrl === "/privacy"){
     res.render('privacy/index', data);
   }
-  else if (req.baseUrl === "/privacy-policy.html") {
+  else if (req.baseUrl === "/privacy-policy.html" || "/privacy.html") {
     res.redirect(301, "/privacy");
   }
   else {

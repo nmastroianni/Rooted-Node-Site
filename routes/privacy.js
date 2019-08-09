@@ -6,7 +6,15 @@ var data = {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('privacy/index', data);
+  if(req.baseUrl === "/privacy"){
+    res.render('privacy/index', data);
+  }
+  else if (req.baseUrl === "/privacy-policy.html") {
+    res.redirect(301, "/privacy");
+  }
+  else {
+    next();
+  }
 });
 
 module.exports = router;

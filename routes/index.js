@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var data = {
-  title: "Rooted Psychotherapy & Counseling"
+  page: "Home"
 }
 
 /* GET home page. */

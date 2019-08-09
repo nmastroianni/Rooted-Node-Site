@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var data = {
-  title: "Rooted Psychotherapy & Counseling - Privacy Policy"
+  page: "Privacy Policy"
 }
 
 /* GET home page. */

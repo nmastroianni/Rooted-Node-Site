@@ -1,10 +1,11 @@
-//- extends layout/layout
-html
-  head
-    link(href="/stylesheets/error.css", rel="stylesheet")
-    script(src="https://kit.fontawesome.com/ee7bf5db15.js")
-  body
-    block content
-    h1= error.status
-    h2= message
+extends layout/layout
+block content
+  .uk-container.uk-text-center.uk-padding
+    h1.uk-heading-large= status
+    p 
+      | Oops! The page you were looking for was 
+      span.uk-text-lowercase #{message}.
+    a.uk-button.uk-button-primary(href="/")
+      span.uk-margin-small-right(uk-icon="icon: arrow-left")
+      | Go Back Home
     pre #{error.stack}

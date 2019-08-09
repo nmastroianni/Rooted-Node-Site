@@ -1,0 +1,210 @@
+{
+    "clinicians": [{
+        "name": "Jennifer L.K. Boiler",
+        "shortname": "jennifer-boiler",
+        "description": "",
+        "qualifications": {
+            "years": "10+",
+            "school": "Rutgers University of Social Work",
+            "license": [{
+                "licenseNumber": "44SC05607900",
+                "state": "New Jersey"
+            }]
+        },
+        "focus": {
+            "age": ["Preteens / Tweens (11 to 13)", "Adolescents / Teenagers (14 to 19)", "Adults", "Elders (65+)"],
+            "communities": ["Cancer"]
+        },
+        "approach": {
+            "types": ["Attachment-based", "Coaching", "Cognitive Behavioral (CBT)", "Emotionally Focused", "Family / Marital", "Family Systems", "Humanistic", "Integrative", "Interpersonal", "Psychodynamic", "Relational", "Solution Focused Brief (SFBT)"],
+            "modalities": ["Individuals", "Couples", "Family"]
+        },
+        "specialties": ["Relationship Issues", "Depression", "Anxiety"],
+        "issues": ["ADHD", "Anger Management", "Behavioral Issues", "Career Counseling", "Chronic Impulsivity", "Codependency", "Divorce", "Domestic Violence", "Emotional Disturbance", "Family Conflict", "Grief", "Life Coaching", "Parenting", "Peer Relationships", "School Issues", "Self Esteem", "Trauma and PTSD"],
+        "mentalhealth": ["Thinking Disorders"]
+    },{
+        "name": "Keren Cohen",
+        "shortname": "keren-cohen",
+        "description": "",
+        "qualifications": {
+            "years": "",
+            "school": "",
+            "license": [{
+                "licenseNumber": "",
+                "state": ""
+            }]
+        },
+        "focus": {
+            "age": [],
+            "communities": []
+        },
+        "approach": {
+            "types": [],
+            "modalities": []
+        },
+        "specialties": [""],
+        "issues": [""],
+        "mentalhealth": [""]
+    },{
+        "name": "Amanda Dregne",
+        "shortname": "amanda-dregne",
+        "description": "",
+        "qualifications": {
+            "years": "",
+            "school": "",
+            "license": [{
+                "licenseNumber": "",
+                "state": ""
+            }]
+        },
+        "focus": {
+            "age": [],
+            "communities": []
+        },
+        "approach": {
+            "types": [],
+            "modalities": []
+        },
+        "specialties": [""],
+        "issues": [""],
+        "mentalhealth": [""]
+    },{
+        "name": "Kyle Morris",
+        "shortname": "Kyle-Morris",
+        "description": "",
+        "qualifications": {
+            "years": "",
+            "school": "",
+            "license": [{
+                "licenseNumber": "",
+                "state": ""
+            }]
+        },
+        "focus": {
+            "age": [],
+            "communities": []
+        },
+        "approach": {
+            "types": [],
+            "modalities": []
+        },
+        "specialties": [""],
+        "issues": [""],
+        "mentalhealth": [""]
+    },{
+        "name": "Maura Rafferty",
+        "shortname": "maura-rafferty",
+        "description": "",
+        "qualifications": {
+            "years": "",
+            "school": "",
+            "license": [{
+                "licenseNumber": "",
+                "state": ""
+            }]
+        },
+        "focus": {
+            "age": [],
+            "communities": []
+        },
+        "approach": {
+            "types": [],
+            "modalities": []
+        },
+        "specialties": [""],
+        "issues": [""],
+        "mentalhealth": [""]
+    },{
+        "name": "Katie Stubs",
+        "shortname": "katie-stubs",
+        "description": "",
+        "qualifications": {
+            "years": "",
+            "school": "",
+            "license": [{
+                "licenseNumber": "",
+                "state": ""
+            }]
+        },
+        "focus": {
+            "age": [],
+            "communities": []
+        },
+        "approach": {
+            "types": [],
+            "modalities": []
+        },
+        "specialties": [""],
+        "issues": [""],
+        "mentalhealth": [""]
+    },{
+        "name": "Lavona Toplyn",
+        "shortname": "Lavona-Toplyn",
+        "description": "",
+        "qualifications": {
+            "years": "",
+            "school": "",
+            "license": [{
+                "licenseNumber": "",
+                "state": ""
+            }]
+        },
+        "focus": {
+            "age": [],
+            "communities": []
+        },
+        "approach": {
+            "types": [],
+            "modalities": []
+        },
+        "specialties": [""],
+        "issues": [""],
+        "mentalhealth": [""]
+    },{
+        "name": "Daniel Twyman",
+        "shortname": "daniel-twyman",
+        "description": "",
+        "qualifications": {
+            "years": "",
+            "school": "",
+            "license": [{
+                "licenseNumber": "",
+                "state": ""
+            }]
+        },
+        "focus": {
+            "age": [],
+            "communities": []
+        },
+        "approach": {
+            "types": [],
+            "modalities": []
+        },
+        "specialties": [""],
+        "issues": [""],
+        "mentalhealth": [""]
+    },{
+        "name": "Margaret Wilson",
+        "shortname": "margaret-wilson",
+        "description": "",
+        "qualifications": {
+            "years": "",
+            "school": "",
+            "license": [{
+                "licenseNumber": "",
+                "state": ""
+            }]
+        },
+        "focus": {
+            "age": [],
+            "communities": []
+        },
+        "approach": {
+            "types": [],
+            "modalities": []
+        },
+        "specialties": [""],
+        "issues": [""],
+        "mentalhealth": [""]
+    }]
+}

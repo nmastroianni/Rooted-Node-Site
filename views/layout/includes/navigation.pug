@@ -20,15 +20,9 @@
                         .uk-navbar-dropdown
                             ul.uk-nav.uk-navbar-dropdown-nav
                                 li
-                                    a(href="#") Jennifer L.K. Boiler
-                                    a(href="#") Keren Cohen
-                                    a(href="#") Amanda Dregne
-                                    a(href="#") Kyle Morris
-                                    a(href="#") Maura Rafferty
-                                    a(href="#") Katie Stubs
-                                    a(href="#") Lavona Toplyn
-                                    a(href="#") Daniel Twyman
-                                    a(href="#") Margaret Wilson
+                                    each clinician in clinicianNames
+                                        a(href=`/clinicians/${clinician.shortname}`)= clinician.name
+
                     li(class="uk-visible@m")
                         a(href="#") Our Locations
                         .uk-navbar-dropdown

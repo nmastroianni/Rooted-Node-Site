@@ -7,22 +7,9 @@
             li.uk-parent
                 a(href="#") Our Team
                 ul.uk-nav-sub
-                    li
-                        a(href="#") Jennifer L.K. Boiler
-                    li
-                        a(href="#") Keren Cohen
-                    li
-                        a(href="#") Amanda Dregne
-                    li
-                        a(href="#") Maura Rafferty
-                    li
-                        a(href="#") Katie Stubs
-                    li
-                        a(href="#") Lavona Toplyn
-                    li
-                        a(href="#") Daniel Twyman
-                    li
-                        a(href="#") Margaret Wilson
+                    each clinician in clinicianNames
+                        li
+                            a(href=`/clinicians/${clinician.shortname}`)= clinician.name        
             li.uk-parent
                 a(href="#") Locations
                 ul.uk-nav-sub

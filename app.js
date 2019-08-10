@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var configs = require('./config');
+var ClinicianService = require('./services/ClinicianService');
 
 var indexRouter = require('./routes/index');
 var privacyRouter = require('./routes/privacy');
@@ -12,6 +13,7 @@ var cliniciansRouter = require('./routes/clinicians');
 var app = express();
 
 var config = configs;
+var clinicianService = new ClinicianService(config.data.clinicians);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +26,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use( async function(req,res,next) {
+  try {
+    var names = await clinicianService.getNames();
+    res.locals.clinicianNames = names;
+    return next();
+  } catch(err) {
+    return next(err);
+  }
+});
 
 app.use('/', indexRouter);
 app.use('/privacy*', privacyRouter);

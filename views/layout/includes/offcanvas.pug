@@ -7,6 +7,8 @@
             li.uk-parent
                 a(href="#") Our Team
                 ul.uk-nav-sub
+                    li
+                        a(href="/clinicians/") All Clinicians
                     each clinician in clinicianNames
                         li
                             a(href=`/clinicians/${clinician.shortname}`)= clinician.name        

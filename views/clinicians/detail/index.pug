@@ -7,12 +7,12 @@ block content
                     img.uk-align-center(data-src=`/images/${clinician.clinician.image}` width="100" height="100" alt="Image of a faceless female torso" uk-img)
                     h2.uk-text-center=clinician.clinician.name
                 div
-                    h3#description Description
+                    h3#description.uk-text-primary Description
                     if clinician.clinician.description !== ""
                         !=clinician.clinician.description
                     else
                         p Clinician description pending...
-                    h3#qualifications Qualifications
+                    h3#qualifications.uk-text-primary Qualifications
                     ul.uk-list.uk-padding-small
                         li 
                             h4 
@@ -44,7 +44,7 @@ block content
                                     li
                                         |Information pending...
 
-                    h3#focus Client Focus
+                    h3#focus.uk-text-primary Client Focus
                     ul.uk-list.uk-padding-small
                         li
                             h4 Ages Served
@@ -68,7 +68,7 @@ block content
                             li
                                 ul
                                     li Information pending...
-                    h3#issues Issues
+                    h3#issues.uk-text-primary Issues
                     if clinician.clinician.issues.length
                         ul.uk-list.uk-list-bullet.uk-padding-small
                             each issue in clinician.clinician.issues
@@ -77,7 +77,7 @@ block content
                         ul.uk-list.uk-padding-small
                             li Information Pending
                        
-                    h3#approach Treatment Approach
+                    h3#approach.uk-text-primary Treatment Approach
                     ul.uk-list.uk-padding-small
                         li 
                             h4 Types of Therapy

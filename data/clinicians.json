@@ -20,8 +20,8 @@
         },
         "approach": {
             "types": ["Attachment-based", "Coaching", "Cognitive Behavioral (CBT)", "Emotionally Focused", "Family / Marital", "Family Systems", "Humanistic", "Integrative", "Interpersonal", "Psychodynamic", "Relational", "Solution Focused Brief (SFBT)"],
-            "modshort": "Individuals Couples Family",
-            "modalities": ["Individuals", "Couples", "Family"]
+            "modalities": ["Individuals", "Couples", "Family"],
+            "modshort": "Individuals Couples Family"
         },
         "specialties": ["Relationship Issues", "Depression", "Anxiety"],
         "issues": ["ADHD", "Anger Management", "Behavioral Issues", "Career Counseling", "Chronic Impulsivity", "Codependency", "Divorce", "Domestic Violence", "Emotional Disturbance", "Family Conflict", "Grief", "Life Coaching", "Parenting", "Peer Relationships", "School Issues", "Self Esteem", "Trauma and PTSD"],
@@ -30,7 +30,35 @@
         "name": "Keren Cohen",
         "shortname": "keren-cohen",
         "image": "default-profile.png",
-        "description": "",
+        "blurb": "Therapy is hard work and I promise to do my part if you are willing to do your part. I will help you make those changes by finding your voice so that you can live your best life.",
+        "description": "<p>Life is complicated on its own. Knowing that you need help and making an appointment is a scary step but one that is not lost on me. We come from a world where staying the course and remaining in your comfort zone is the easy thing to do. I am asking you to get a little uncomfortable. Nothing changes unless one is willing to put in the hard work. The fact that you are taking this first step is a huge deal in getting out of your comfort zone and being open to change. It will be my privilege to work with you and help you develop some life goals to help you better deal with all of your current life stressors.</p><p>I specialize in working with but not limited to teens, adults and older adults. I have much experience in dealing with grief and issues surrounding immense loss, transition, depression and anxiety. I work in several different modalities and can incorporate CBT, psychodynamic, mindfulness and others in an eclectic approach and adapt to your specific needs.</p>",
+        "qualifications": {
+            "years": "",
+            "school": "Rutgers University",
+            "license": [{
+                "licenseNumber": "44SC05730700",
+                "state": "New Jersey"
+            }]
+        },
+        "focus": {
+            "age": ["Preteens / Tweens (11 to 13)", "Adolescents / Teenagers (14 to 19)", "Adults", "Elders (65+)"],
+            "ageshort": "Preteens Teenagers Adults Elders",
+            "communities": ["Cancer", "Gay Allied", "Lesbian Allied", "Veterans"]
+        },
+        "approach": {
+            "types": [],
+            "modalities": [],
+            "modshort": "Individuals"
+        },
+        "specialties": [],
+        "issues": [],
+        "mentalhealth": []
+    },{
+        "name": "Amanda Dregne",
+        "shortname": "amanda-dregne",
+        "image": "default-profile.png",
+        "blurb": "\"Owning our story and loving ourselves through the process is the bravest thing that we will ever do.\" ~ Brene Brown",
+        "description": "<p>Everyone has a unique story. It takes courage and strength to explore the untold story in you. Deciding to speak to someone can be a difficult and scary step. It is important to feel you have a safe place to be your true self, free of judgment. Utilizing a strengths-based approach, we can use these strengths to collaboratively work towards your goals and help you lead a more fulfilling life.</p>",
         "qualifications": {
             "years": "",
             "school": "",
@@ -46,31 +74,8 @@
         },
         "approach": {
             "types": [],
-            "modalities": []
-        },
-        "specialties": [],
-        "issues": [],
-        "mentalhealth": []
-    },{
-        "name": "Amanda Dregne",
-        "shortname": "amanda-dregne",
-        "image": "default-profile.png",
-        "description": "",
-        "qualifications": {
-            "years": "",
-            "school": "",
-            "license": [{
-                "licenseNumber": "",
-                "state": ""
-            }]
-        },
-        "focus": {
-            "age": [],
-            "communities": []
-        },
-        "approach": {
-            "types": [],
-            "modalities": []
+            "modalities": [],
+            "modshort": "Individuals"
         },
         "specialties": [],
         "issues": [],
@@ -78,33 +83,8 @@
     },{
         "name": "Kyle Morris",
         "shortname": "kyle-morris",
-        "image": "default-profile.png",
-        "description": "",
-        "qualifications": {
-            "years": "",
-            "school": "",
-            "license": [{
-                "licenseNumber": "",
-                "state": ""
-            }]
-        },
-        "focus": {
-            "age": [],
-            "communities": []
-        },
-        "approach": {
-            "types": [],
-            "modalities": []
-        },
-        "specialties": [],
-        "issues": [],
-        "mentalhealth": [
-
-        ]
-    },{
-        "name": "Maura Rafferty",
-        "shortname": "maura-rafferty",
-        "image": "default-profile.png",
+        "image": "default-profile-male.png",
+        "blurb": "",
         "description": "",
         "qualifications": {
             "years": "",
@@ -121,7 +101,37 @@
         },
         "approach": {
             "types": [],
-            "modalities": []
+            "modalities": [],
+            "modshort": "Individuals"
+        },
+        "specialties": [],
+        "issues": [],
+        "mentalhealth": [
+
+        ]
+    },{
+        "name": "Maura Rafferty",
+        "shortname": "maura-rafferty",
+        "image": "default-profile.png",
+        "blurb": "",
+        "description": "",
+        "qualifications": {
+            "years": "",
+            "school": "",
+            "license": [{
+                "licenseNumber": "",
+                "state": ""
+            }]
+        },
+        "focus": {
+            "age": [],
+            "ageshort": "Preteens Teenagers Adults Elders",
+            "communities": []
+        },
+        "approach": {
+            "types": [],
+            "modalities": [],
+            "modshort": "Individuals "
         },
         "specialties": [],
         "issues": [],
@@ -130,6 +140,7 @@
         "name": "Katie Stubbs",
         "shortname": "katie-stubbs",
         "image": "default-profile.png",
+        "blurb": "",
         "description": "",
         "qualifications": {
             "years": "",
@@ -141,12 +152,13 @@
         },
         "focus": {
             "age": [],
-            "ageshort": "Teenagers Adults",
+            "ageshort": "Children Teenagers Adults",
             "communities": []
         },
         "approach": {
             "types": [],
-            "modalities": []
+            "modalities": [],
+            "modshort": "Individuals"
         },
         "specialties": [],
         "issues": [],
@@ -155,6 +167,7 @@
         "name": "Lavona Toplyn",
         "shortname": "lavona-toplyn",
         "image": "default-profile.png",
+        "blurb": "",
         "description": "",
         "qualifications": {
             "years": "",
@@ -166,11 +179,13 @@
         },
         "focus": {
             "age": [],
+            "ageshort": "Preteens Teenagers Adults Elders",
             "communities": []
         },
         "approach": {
             "types": [],
-            "modalities": []
+            "modalities": [],
+            "modshort": "Individuals"
         },
         "specialties": [],
         "issues": [],
@@ -179,6 +194,7 @@
         "name": "Daniel Twyman",
         "shortname": "daniel-twyman",
         "image": "default-profile-male.png",
+        "blurb": "",
         "description": "",
         "qualifications": {
             "years": "",
@@ -190,11 +206,13 @@
         },
         "focus": {
             "age": [],
+            "ageshort": "Children Preteens Teenagers Adults Elders",
             "communities": []
         },
         "approach": {
             "types": [],
-            "modalities": []
+            "modalities": [],
+            "modshort": "Individuals"
         },
         "specialties": [],
         "issues": [],
@@ -203,6 +221,7 @@
         "name": "Margaret Wilson",
         "shortname": "margaret-wilson",
         "image": "default-profile.png",
+        "blurb": "",
         "description": "",
         "qualifications": {
             "years": "",
@@ -214,11 +233,13 @@
         },
         "focus": {
             "age": [],
+            "ageshort": "Children Preteens Teenagers Adults Elders",
             "communities": []
         },
         "approach": {
             "types": [],
-            "modalities": []
+            "modalities": [],
+            "modshort": "Individuals"
         },
         "specialties": [],
         "issues": [],

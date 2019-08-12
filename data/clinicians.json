@@ -46,12 +46,12 @@
             "communities": ["Cancer", "Gay Allied", "Lesbian Allied", "Veterans"]
         },
         "approach": {
-            "types": [],
-            "modalities": [],
-            "modshort": "Individuals"
+            "types": ["Coaching","Cognitive Behavioral (CBT)","Family Systems","Interpersonal","Mindfulness-Based (MBCT)","Motivational Interviewing","Narrative","Person-Centered","Psychodynamic","Strength-Based"],
+            "modalities": ["Individual","Family"],
+            "modshort": "Individuals Family"
         },
-        "specialties": [],
-        "issues": [],
+        "specialties": ["Grief","Depression","Life Transitions"],
+        "issues": ["Alzheimer's", "Anxiety", "Chronic Illness"],
         "mentalhealth": []
     },{
         "name": "Amanda Dregne",

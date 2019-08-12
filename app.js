@@ -6,14 +6,15 @@ var logger = require('morgan');
 var configs = require('./config');
 var ClinicianService = require('./services/ClinicianService');
 
-var indexRouter = require('./routes/index');
-var privacyRouter = require('./routes/privacy');
-var cliniciansRouter = require('./routes/clinicians');
+// var indexRouter = require('./routes/index');
+// var privacyRouter = require('./routes/privacy');
+// var cliniciansRouter = require('./routes/clinicians');
 
 var app = express();
 
 var config = configs;
 var clinicianService = new ClinicianService(config.data.clinicians);
+var routes = require('./routes');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,9 +38,9 @@ app.use( async function(req,res,next) {
   }
 });
 
-app.use('/', indexRouter);
-app.use('/privacy*', privacyRouter);
-app.use('/clinicians', cliniciansRouter);
+app.use('/', routes({clinicianService}));
+// app.use('/privacy*', privacyRouter());
+// app.use('/clinicians', cliniciansRouter({clinicianService}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

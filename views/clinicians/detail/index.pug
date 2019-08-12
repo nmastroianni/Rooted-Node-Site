@@ -1,0 +1,124 @@
+extends ../../layout/layout
+block content
+    .uk-container.uk-padding
+        #profile-grid(class="uk-child-width-expand uk-padding" uk-grid)
+            div(class="uk-width-2-3@l")
+                header#profile-header
+                    img.uk-align-center(data-src=`/images/${clinician.clinician.image}` width="100" height="100" alt="Image of a faceless female torso" uk-img)
+                    h2.uk-text-center=clinician.clinician.name
+                div
+                    h3#description Description
+                    if clinician.clinician.description !== ""
+                        !=clinician.clinician.description
+                    else
+                        p Clinician description pending...
+                    h3#qualifications Qualifications
+                    ul.uk-list.uk-padding-small
+                        li 
+                            h4 
+                                | Years in Practice:
+                            ul.uk-list
+                                if clinician.clinician.qualifications.years !== ""
+                                    li=clinician.clinician.qualifications.years
+                                else
+                                    li Information pending...
+                        li
+                            h4 
+                                | School:
+                            ul.uk-list
+                                if clinician.clinician.qualifications.school !== ""
+                                    li=clinician.clinician.qualifications.school
+                                else
+                                    li Information pending...
+                        li
+                            h4 License and State:
+                            if clinician.clinician.qualifications.license[0].licenseNumber !== ""
+                                ul.uk-list
+                                    each license in clinician.clinician.qualifications.license
+                                        li
+                                            =license.licenseNumber
+                                            |  -  
+                                            =license.state
+                            else 
+                                ul.uk-list 
+                                    li
+                                        |Information pending...
+
+                    h3#focus Client Focus
+                    ul.uk-list.uk-padding-small
+                        li
+                            h4 Ages Served
+                        if clinician.clinician.focus.age.length
+                            li
+                                ul.uk-list.uk-list-bullet
+                                    each age in clinician.clinician.focus.age
+                                        li=age
+                        else
+                            li
+                                ul
+                                    li Information pending...
+                        li 
+                            h4 Communities
+                        if clinician.clinician.focus.communities.length
+                            li
+                                ul.uk-list.uk-list-bullet
+                                    each community in clinician.clinician.focus.communities
+                                        li=community
+                        else
+                            li
+                                ul
+                                    li Information pending...
+                    h3#issues Issues
+                    if clinician.clinician.issues.length
+                        ul.uk-list.uk-list-bullet.uk-padding-small
+                            each issue in clinician.clinician.issues
+                                li=issue
+                    else
+                        ul.uk-list.uk-padding-small
+                            li Information Pending
+                       
+                    h3#approach Treatment Approach
+                    ul.uk-list.uk-padding-small
+                        li 
+                            h4 Types of Therapy
+                            if clinician.clinician.approach.types.length   
+                                each ttype in clinician.clinician.approach.types
+                                    ul.uk-list.uk-list-bullet
+                                        li=ttype
+                            else
+                                ul.uk-list
+                                        li Information pending...
+
+                        li
+                            h4 Modality
+                            if clinician.clinician.approach.modalities.length   
+                                each modality in clinician.clinician.approach.modalities
+                                    ul.uk-list.uk-list-bullet
+                                        li=modality
+                            else
+                                ul.uk-list
+                                    li Information pending...
+
+
+            div(class="uk-visible@l uk-width-1-3@l uk-padding")
+                div(uk-sticky="offset: 90" class="uk-sticky uk-sticky-fixed" style="z-index: 1")
+                    header.uk-text-center    
+                        h2 About
+                            br
+                            =clinician.clinician.name
+
+                    div.uk-padding
+                        ul(class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true; offset: 100")
+                            li
+                                a(href="#profile-header") Profile
+                            li
+                                a(href="#description") Description
+                            li
+                                a(href="#qualifications") Qualifications
+                            li
+                                a(href="#focus") Client Focus
+                            li
+                                a(href="#issues") Issues
+                            li
+                                a(href="#approach") Treatment Approach
+

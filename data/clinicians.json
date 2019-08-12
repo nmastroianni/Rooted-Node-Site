@@ -2,7 +2,9 @@
     "clinicians": [{
         "name": "Jennifer L.K. Boiler",
         "shortname": "jennifer-boiler",
-        "description": "",
+        "image": "default-profile.png",
+        "blurb": "I am ready to face the future with you.",
+        "description": "<p>The decision to seek therapeutic support can change your life. It is my privilege to be part of your journey. Together we will explore what matters to you. We will approach each and every step at a pace that is most comfortable to you. It is our shared goal to collaborate and work toward making meaningful, lasting change in your life. Your time matters to me, it is my commitment to help you develop new strategies and skills every time you are in my office. I am ready to face the future with you. <p> I have the honor to provide services to adults, couples, families and teens. My specialties include, but are not limited to, Illness Adjustment, Cancer, Trauma, Anxiety, Depression, Conflict Resolution, Domestic Violence, Grief, Loss, Life Coaching, Aging, End of Life, Relationship Challenges, Parenting, and Post Partum adjustment.",
         "qualifications": {
             "years": "10+",
             "school": "Rutgers University of Social Work",
@@ -13,10 +15,12 @@
         },
         "focus": {
             "age": ["Preteens / Tweens (11 to 13)", "Adolescents / Teenagers (14 to 19)", "Adults", "Elders (65+)"],
+            "ageshort": "Preteens Teenagers Adults Elders",
             "communities": ["Cancer"]
         },
         "approach": {
             "types": ["Attachment-based", "Coaching", "Cognitive Behavioral (CBT)", "Emotionally Focused", "Family / Marital", "Family Systems", "Humanistic", "Integrative", "Interpersonal", "Psychodynamic", "Relational", "Solution Focused Brief (SFBT)"],
+            "modshort": "Individuals Couples Family",
             "modalities": ["Individuals", "Couples", "Family"]
         },
         "specialties": ["Relationship Issues", "Depression", "Anxiety"],
@@ -25,6 +29,7 @@
     },{
         "name": "Keren Cohen",
         "shortname": "keren-cohen",
+        "image": "default-profile.png",
         "description": "",
         "qualifications": {
             "years": "",
@@ -36,18 +41,20 @@
         },
         "focus": {
             "age": [],
+            "ageshort": "Preteens Teenagers Adults Elders",
             "communities": []
         },
         "approach": {
             "types": [],
             "modalities": []
         },
-        "specialties": [""],
-        "issues": [""],
-        "mentalhealth": [""]
+        "specialties": [],
+        "issues": [],
+        "mentalhealth": []
     },{
         "name": "Amanda Dregne",
         "shortname": "amanda-dregne",
+        "image": "default-profile.png",
         "description": "",
         "qualifications": {
             "years": "",
@@ -65,12 +72,13 @@
             "types": [],
             "modalities": []
         },
-        "specialties": [""],
-        "issues": [""],
-        "mentalhealth": [""]
+        "specialties": [],
+        "issues": [],
+        "mentalhealth": []
     },{
         "name": "Kyle Morris",
         "shortname": "kyle-morris",
+        "image": "default-profile.png",
         "description": "",
         "qualifications": {
             "years": "",
@@ -88,12 +96,15 @@
             "types": [],
             "modalities": []
         },
-        "specialties": [""],
-        "issues": [""],
-        "mentalhealth": [""]
+        "specialties": [],
+        "issues": [],
+        "mentalhealth": [
+
+        ]
     },{
         "name": "Maura Rafferty",
         "shortname": "maura-rafferty",
+        "image": "default-profile.png",
         "description": "",
         "qualifications": {
             "years": "",
@@ -105,18 +116,20 @@
         },
         "focus": {
             "age": [],
+            "ageshort": "Children Preteens Teenagers Adults Elders",
             "communities": []
         },
         "approach": {
             "types": [],
             "modalities": []
         },
-        "specialties": [""],
-        "issues": [""],
-        "mentalhealth": [""]
+        "specialties": [],
+        "issues": [],
+        "mentalhealth": []
     },{
-        "name": "Katie Stubs",
-        "shortname": "katie-stubs",
+        "name": "Katie Stubbs",
+        "shortname": "katie-stubbs",
+        "image": "default-profile.png",
         "description": "",
         "qualifications": {
             "years": "",
@@ -128,18 +141,20 @@
         },
         "focus": {
             "age": [],
+            "ageshort": "Teenagers Adults",
             "communities": []
         },
         "approach": {
             "types": [],
             "modalities": []
         },
-        "specialties": [""],
-        "issues": [""],
-        "mentalhealth": [""]
+        "specialties": [],
+        "issues": [],
+        "mentalhealth": []
     },{
         "name": "Lavona Toplyn",
         "shortname": "lavona-toplyn",
+        "image": "default-profile.png",
         "description": "",
         "qualifications": {
             "years": "",
@@ -157,12 +172,13 @@
             "types": [],
             "modalities": []
         },
-        "specialties": [""],
-        "issues": [""],
-        "mentalhealth": [""]
+        "specialties": [],
+        "issues": [],
+        "mentalhealth": []
     },{
         "name": "Daniel Twyman",
         "shortname": "daniel-twyman",
+        "image": "default-profile-male.png",
         "description": "",
         "qualifications": {
             "years": "",
@@ -180,12 +196,13 @@
             "types": [],
             "modalities": []
         },
-        "specialties": [""],
-        "issues": [""],
-        "mentalhealth": [""]
+        "specialties": [],
+        "issues": [],
+        "mentalhealth": []
     },{
         "name": "Margaret Wilson",
         "shortname": "margaret-wilson",
+        "image": "default-profile.png",
         "description": "",
         "qualifications": {
             "years": "",
@@ -203,8 +220,8 @@
             "types": [],
             "modalities": []
         },
-        "specialties": [""],
-        "issues": [""],
-        "mentalhealth": [""]
+        "specialties": [],
+        "issues": [],
+        "mentalhealth": []
     }]
 }

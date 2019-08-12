@@ -1,0 +1,59 @@
+extends ../layout/layout
+block content
+    .uk-container.uk-padding
+        h1.uk-header-large Discover Our Clinicians
+        p.uk-text-small Use the links below to filter our clinicians
+        div(uk-filter="target: .js-filter")
+            div(class="uk-grid-small uk-flex-middle" uk-grid)
+                .uk-width-expand
+                    div(class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid)
+                        div
+                            ul.uk-subnav.uk-subnav-pill(uk-margin)
+                                li.uk-active(uk-filter-control)
+                                    a(href="#") All
+                        div
+                            ul.uk-subnav.uk-subnav-pill(uk-margin)
+                                li(uk-filter-control="[data-age*='Children']")
+                                    a(href="#" uk-tooltip="title: 6-10; pos: bottom") Children
+                                li(uk-filter-control="[data-age*='Preteens']")
+                                    a(href="#" uk-tooltip="title: 11-13; pos: bottom") Preteens
+                                li(uk-filter-control="[data-age*='Teenagers']")
+                                    a(href="#" uk-tooltip="title: 14-19; pos: bottom") Teenagers
+                                li(uk-filter-control="[data-age*='Adults']")
+                                    a(href="#") Adults
+                                li(uk-filter-control="[data-age*='Elders']")
+                                    a(href="#" uk-tooltip="title: 65+; pos: bottom") Elders
+            div(class="uk-grid-small uk-flex-middle" uk-grid)    
+                .uk-width-expand
+                    div(class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid)
+                        div
+                            ul.uk-subnav.uk-subnav-pill(uk-margin)
+                                li.uk-active(uk-filter-control)
+                                    a(href="#") All
+                        div
+                            ul.uk-subnav.uk-subnav-pill(uk-margin)
+                                li(uk-filter-control="[data-modality*='Individuals']")
+                                    a(href="#") Individuals
+                                li(uk-filter-control="[data-modality*='Couples']")
+                                    a(href="#") Couples
+                                li(uk-filter-control="[data-modality*='Family']")
+                                    a(href="#") Family
+
+            ul(class="js-filter uk-child-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true")
+                each clinician in cliniciansList
+                    li(data-age=`${clinician.ageshort}` data-modality=`${clinician.modshort}`)
+                        .uk-card.uk-card-default.uk-card-hover 
+                            .uk-card-header
+                                div(class="uk-grid-small uk-flex-middle" uk-grid)
+                                    .uk-width-auto
+                                        img.uk-border-circle(width="40" height="40" src=`/images/${clinician.image}`)
+                                    .uk-width-expand
+                                        h3.uk-card-title.uk-margin-remove-bottom=clinician.name
+                            .uk-card-body
+                                if clinician.blurb
+                                    p=clinician.blurb
+                                else
+                                    p 
+                                        | Click below to learn more about #{clinician.name}? 
+                            .uk-card-footer.uk-text-right.uk-padding-small
+                                a.uk-button.uk-button.text(href=`/clinicians/${clinician.shortname}`) Learn more

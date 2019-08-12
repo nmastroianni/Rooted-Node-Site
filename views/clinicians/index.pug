@@ -10,18 +10,18 @@ block content
                         div
                             ul.uk-subnav.uk-subnav-pill(uk-margin)
                                 li.uk-active(uk-filter-control)
-                                    a(href="#") All
+                                    a(href="#" uk-filter-control="group: age") All
                         div
                             ul.uk-subnav.uk-subnav-pill(uk-margin)
-                                li(uk-filter-control="[data-age*='Children']")
+                                li(uk-filter-control="filter: [data-age*='Children']; group: age")
                                     a(href="#" uk-tooltip="title: 6-10; pos: bottom") Children
-                                li(uk-filter-control="[data-age*='Preteens']")
+                                li(uk-filter-control="filter: [data-age*='Preteens']; group: age")
                                     a(href="#" uk-tooltip="title: 11-13; pos: bottom") Preteens
-                                li(uk-filter-control="[data-age*='Teenagers']")
+                                li(uk-filter-control="filter: [data-age*='Teenagers']; group: age")
                                     a(href="#" uk-tooltip="title: 14-19; pos: bottom") Teenagers
-                                li(uk-filter-control="[data-age*='Adults']")
+                                li(uk-filter-control="filter: [data-age*='Adults']; group: age")
                                     a(href="#") Adults
-                                li(uk-filter-control="[data-age*='Elders']")
+                                li(uk-filter-control="filter: [data-age*='Elders']; group: age")
                                     a(href="#" uk-tooltip="title: 65+; pos: bottom") Elders
             div(class="uk-grid-small uk-flex-middle" uk-grid)    
                 .uk-width-expand
@@ -29,14 +29,14 @@ block content
                         div
                             ul.uk-subnav.uk-subnav-pill(uk-margin)
                                 li.uk-active(uk-filter-control)
-                                    a(href="#") All
+                                    a(href="#" uk-filter-control="group: modality") All
                         div
                             ul.uk-subnav.uk-subnav-pill(uk-margin)
-                                li(uk-filter-control="[data-modality*='Individuals']")
+                                li(uk-filter-control="filter: [data-modality*='Individuals']; group: modality")
                                     a(href="#") Individuals
-                                li(uk-filter-control="[data-modality*='Couples']")
+                                li(uk-filter-control="filter: [data-modality*='Couples']; group: modality")
                                     a(href="#") Couples
-                                li(uk-filter-control="[data-modality*='Family']")
+                                li(uk-filter-control="filter: [data-modality*='Family']; group: modality")
                                     a(href="#") Family
 
             ul(class="js-filter uk-child-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true")

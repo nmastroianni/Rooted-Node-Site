@@ -3,7 +3,7 @@
         "name": "Jennifer L.K. Boiler",
         "shortname": "jennifer-boiler",
         "image": "default-profile.png",
-        "blurb": "I am ready to face the future with you.",
+        "blurb": "I feel deeply committed to helping people re-discover internal strength. These challenging times in our lives do not have to define us. With support, you can take charge of your life.",
         "description": "<p>The decision to seek therapeutic support can change your life. It is my privilege to be part of your journey. Together we will explore what matters to you. We will approach each and every step at a pace that is most comfortable to you. It is our shared goal to collaborate and work toward making meaningful, lasting change in your life. Your time matters to me, it is my commitment to help you develop new strategies and skills every time you are in my office. I am ready to face the future with you. <p> I have the honor to provide services to adults, couples, families and teens. My specialties include, but are not limited to, Illness Adjustment, Cancer, Trauma, Anxiety, Depression, Conflict Resolution, Domestic Violence, Grief, Loss, Life Coaching, Aging, End of Life, Relationship Challenges, Parenting, and Post Partum adjustment.",
         "qualifications": {
             "years": "10+",
@@ -52,7 +52,7 @@
         },
         "specialties": ["Grief","Depression","Life Transitions"],
         "issues": ["Alzheimer's", "Anxiety", "Chronic Illness"],
-        "mentalhealth": []
+        "mentalhealth": ["Elderly Persons Disorders"]
     },{
         "name": "Amanda Dregne",
         "shortname": "amanda-dregne",
@@ -63,19 +63,19 @@
             "years": "",
             "school": "",
             "license": [{
-                "licenseNumber": "",
-                "state": ""
+                "licenseNumber": "44SL06391300",
+                "state": "New Jersey"
             }]
         },
         "focus": {
-            "age": [],
-            "ageshort": "Preteens Teenagers Adults Elders",
+            "age": ["Adults", "Elders"],
+            "ageshort": "Adults Elders",
             "communities": []
         },
         "approach": {
-            "types": [],
-            "modalities": [],
-            "modshort": "Individuals"
+            "types": ["Cognitive Behavioral (CBT)", "Culturally Sensitive", "Interpersonal", "Mindfulness-Based (MBCT)", "Person-Centered","Strength-Based"],
+            "modalities": ["Individuals", "Couples"],
+            "modshort": "Individuals Couples"
         },
         "specialties": [],
         "issues": [],
@@ -84,28 +84,28 @@
         "name": "Kyle Morris",
         "shortname": "kyle-morris",
         "image": "default-profile-male.png",
-        "blurb": "",
-        "description": "",
+        "blurb": "I believe in meeting clients where they are and providing a safe space where they can openly express their feelings.",
+        "description": "<p>I will help you process your feelings centered around sexuality or other challenges. I work well with students who have difficulties with ADHD.</p><p>We will work together to overcome your obstacles through talk therapy.</p><p>Dealing with unresolved sexual issues and reality can be a daunting task. We will work together to face those obstacles and face them head on.</p>",
         "qualifications": {
-            "years": "",
-            "school": "",
+            "years": "Less than 2",
+            "school": "Rutgers Univsersity",
             "license": [{
-                "licenseNumber": "",
-                "state": ""
+                "licenseNumber": "44SL06360100",
+                "state": "New Jersey"
             }]
         },
         "focus": {
-            "age": [],
-            "ageshort": "Children Preteens Teenagers Adults Elders",
-            "communities": []
+            "age": ["Children (6-10)","Adolescents / Teenagers (14 to 19)","Adults"],
+            "ageshort": "Children Preteens Teenagers Adults",
+            "communities": ["Bisexual Allied","Gay Allied"]
         },
         "approach": {
-            "types": [],
-            "modalities": [],
-            "modshort": "Individuals"
+            "types": ["Cognitive Behavioral","Internal Family Systems"],
+            "modalities": ["Individuals","Family"],
+            "modshort": "Individuals Family"
         },
-        "specialties": [],
-        "issues": [],
+        "specialties": ["Child", "Adolescent","Family Conflict","Gay"],
+        "issues": ["ADHD","Anger Management","Behavioral Issues","Men's Issues"],
         "mentalhealth": [
 
         ]
@@ -113,55 +113,55 @@
         "name": "Maura Rafferty",
         "shortname": "maura-rafferty",
         "image": "default-profile.png",
-        "blurb": "",
-        "description": "",
+        "blurb": "My mission is to help you find a greater sense peace and contentment in your everyday life.",
+        "description": "<p>We will start by addressing the immediate stressors impacting your life today to provide immediate, effective, and meaningful relief. From there, we can explore the beliefs you have about yourself and others and how these beliefs can be the root cause of recurring discomfort.. Through our collaborative work, we will challenge these beliefs and work towards more satisfying relationships, increased self-esteem and more adaptive behaviors.</p><p>I create the safety needed within our relationship that will allow us to explore issues that underlie depression, anxiety, loneliness, lack of fulfillment, and other uncomfortable and undesired feelings. I utilize a strengths-based perspective identifying each person's inherent ability to overcome what is preventing them from achieving peace.</p><p>I provide short and long term psychotherapy in a non-judgmental and supportive environment that promotes healing and the opportunity for personal growth. Each journey is sacred and unique and It would absolutely be my honor to walk alongside you on your path.</p>",
         "qualifications": {
-            "years": "",
-            "school": "",
+            "years": "Less than 2",
+            "school": "Rutgers Univsersity",
             "license": [{
-                "licenseNumber": "",
-                "state": ""
+                "licenseNumber": "44SL06370400",
+                "state": "New Jersey"
             }]
         },
         "focus": {
-            "age": [],
-            "ageshort": "Preteens Teenagers Adults Elders",
+            "age": ["Adults","Elders (65+)"],
+            "ageshort": "Adults Elders",
             "communities": []
         },
         "approach": {
-            "types": [],
-            "modalities": [],
-            "modshort": "Individuals "
+            "types": ["Cognitive Behavioral (CBT)","Compassion Focused","Culturally Sensitive","Eclectic","Family / Marital","Family Systems","Humanistic","Interpersonal","Motivational Interviewing","Multicultural","Narrative","Person-Centered","Positive Pscyhology","Strength-Based"],
+            "modalities": ["Individuals","Couples", "Family"],
+            "modshort": "Individuals Couples Family"
         },
-        "specialties": [],
-        "issues": [],
+        "specialties": ["Anxiety","Depression","Relationship Issues"],
+        "issues": ["Behavioral Issues","Codependency","Coping Skills","Family Conflict","Grief","Parenting","Peer Relationships","School Issues","Self Esteem","Stress","Trauma and PTSD"],
         "mentalhealth": []
     },{
         "name": "Katie Stubbs",
         "shortname": "katie-stubbs",
         "image": "default-profile.png",
-        "blurb": "",
-        "description": "",
+        "blurb": "Seeking help is such a brave choice! In my practice, I work collaboratively with you to identify your goals and to develop new skills to help you navigate challenging life circumstances.",
+        "description": "<p>I provide a safe and supportive environment to help adolescents, young adults, adults, and families work through their current difficulties. My specialties include, but are not limited to, processing past trauma, coping with anxiety, managing depression, and ceasing self-harm. I also focus on helping teens cope with and decrease challenges related to high school, peer interactions, and family relationships.</p><p>Additionally, I am certified in Trauma-Focused Cognitive Behavioral Therapy, or TF-CBT. This treatment model is used to assist those who are experiencing emotional and behavioral difficulties as a result of traumatic experiences. I believe this treatment model allows individuals to recognize their resilience and move forward in their lives.</p><p>I am committed to empowering others to make positive changes in their lives. I aspire to help individuals gain mastery and control over their thoughts, feelings, and actions. I hope for everyone to acknowledge their value and worth as a person.</p>",
         "qualifications": {
-            "years": "",
-            "school": "",
+            "years": "6 years",
+            "school": "Rutgers Univsersity School of Social Work",
             "license": [{
-                "licenseNumber": "",
-                "state": ""
+                "licenseNumber": "44SC05706900",
+                "state": "New Jersey"
             }]
         },
         "focus": {
-            "age": [],
-            "ageshort": "Children Teenagers Adults",
+            "age": ["Children (6-10)","Preteens / Tweens (11 to 13)","Adolescents / Teenagers (14 to 19)","Adults"],
+            "ageshort": "Children Preteens Teenagers Adults",
             "communities": []
         },
         "approach": {
-            "types": [],
-            "modalities": [],
-            "modshort": "Individuals"
+            "types": ["Cognitive Behavioral (CBT)","Compassion Focused","Culturally Sensitive","Emotionally Focused","Interpersonal","Mindfulness-Based (MBCT)","Person-Centered","Strength-Based","Trauma Focused"],
+            "modalities": ["Individuals","Couples"],
+            "modshort": "Individuals Couples"
         },
-        "specialties": [],
-        "issues": [],
+        "specialties": ["Trauma and PTSD","Anxiety","Depression"],
+        "issues": ["Behavioral Issues","Codependency","Coping Skills","Emotional Disturbance","Family Conflict","Peer Relationships","Relationship Issues", "School Issues","Self Esteem","Self Harming","Sexual Abuse","Suicidal Ideation","Women's Issues"],
         "mentalhealth": []
     },{
         "name": "Lavona Toplyn",
@@ -173,14 +173,14 @@
             "years": "",
             "school": "",
             "license": [{
-                "licenseNumber": "",
-                "state": ""
+                "licenseNumber": "44SC05855200",
+                "state": "New Jersey"
             }]
         },
         "focus": {
-            "age": [],
-            "ageshort": "Preteens Teenagers Adults Elders",
-            "communities": []
+            "age": ["Adolescents / Teenagers (14 to 19)","Adults","Elders (65+)"],
+            "ageshort": "Teenagers Adults Elders",
+            "communities": ["Veterans"]
         },
         "approach": {
             "types": [],
@@ -188,61 +188,61 @@
             "modshort": "Individuals"
         },
         "specialties": [],
-        "issues": [],
+        "issues": ["Coping Skills","Grief","Life Coaching","Self Esteem"],
         "mentalhealth": []
     },{
         "name": "Daniel Twyman",
         "shortname": "daniel-twyman",
         "image": "default-profile-male.png",
-        "blurb": "",
-        "description": "",
+        "blurb": "I am deeply passionate about helping other’s search and find ’the change they want to see in their lives’.",
+        "description": "<p>Choosing the journey to seek support can be an important step in empowering oneself to work towards achieving personal and life goals. In my practice, we will work together to achieve your goals and help you navigate through life’s situations to foster growth, build skills and feel better equipped to deal with life’s challenges.</p><p>Through a collaborative and guided approach, our goals will stem from looking at disruptive feelings, thoughts and beliefs and how they impact our physical, mental and emotional well being. I am deeply passionate about helping other’s search and find ’the change they want to see in their lives’.</p><p>The path to the ‘best you’ starts with personal awareness, self evaluation and willingness to challenge oneself. Whether this begins with areas of your own personal growth, or your role(s) in familial, social and professional domains. My expertise is centered around but not limited to; Parenting, Couples and Family Therapy, Behavioral Issues, Anxiety, D</p>",
         "qualifications": {
             "years": "",
             "school": "",
             "license": [{
-                "licenseNumber": "",
-                "state": ""
+                "licenseNumber": "44SL06215300",
+                "state": "New Jersey"
             }]
         },
         "focus": {
             "age": [],
-            "ageshort": "Children Preteens Teenagers Adults Elders",
+            "ageshort": "Children Preteens Teenagers Adults",
             "communities": []
         },
         "approach": {
             "types": [],
-            "modalities": [],
-            "modshort": "Individuals"
+            "modalities": ["Individuals","Family"],
+            "modshort": "Individuals Family"
         },
-        "specialties": [],
-        "issues": [],
+        "specialties": ["Parenting","Family Conflict","Behavioral Issues"],
+        "issues": ["Anxiety","Relationship Issues","School Issues"],
         "mentalhealth": []
     },{
         "name": "Margaret Wilson",
         "shortname": "margaret-wilson",
         "image": "default-profile.png",
-        "blurb": "",
-        "description": "",
+        "blurb": "Seeking support in a safe therapeutic environment can offer you the care and support you need. In working together we will carefully explore and plan the next steps in your journey.",
+        "description": "<p>Life comes with many unexpected challenges. Seeking support in a safe therapeutic environment can offer you the care and support you need. In working together we will carefully explore and plan the next steps in your journey. It's important to me to listen and help you develop coping skills and strategies that will help you personally grow and overcome the challenges your faced with. Your time is valuable and important to me and I will offer you my commitment in working together to help you build upon your toolbox of strategies that you can use daily.</p><p>I have experience in working with children, adolescents, adults, and families who have experienced trauma or emotional distress, as well as parents, children, and individuals who are struggling with relationships, anger, anxiety, grief/loss, trauma, and self-esteem issues.</p><p>I would be honored if you would chose to work together with me. I believe that in working together we can re-discover your strengths and abilities as you heal and continue to grow through and overcome life's obstacles and challenges in the future.</p>",
         "qualifications": {
             "years": "",
-            "school": "",
+            "school": "Rutgers University School of Social Work",
             "license": [{
-                "licenseNumber": "",
-                "state": ""
+                "licenseNumber": "44SL05797500",
+                "state": "New Jersey"
             }]
         },
         "focus": {
-            "age": [],
+            "age": ["Children (6-10)","Preteens / Tweens (11 to 13)","Adolescents / Teenagers (14 to 19)","Adults","Elders (65+)"],
             "ageshort": "Children Preteens Teenagers Adults Elders",
             "communities": []
         },
         "approach": {
             "types": [],
-            "modalities": [],
-            "modshort": "Individuals"
+            "modalities": ["Individuals","Family"],
+            "modshort": "Individuals Family"
         },
-        "specialties": [],
-        "issues": [],
-        "mentalhealth": []
+        "specialties": ["Anxiety","Behavioral Issues","Depression"],
+        "issues": ["ADHD","Anger Management","Career Counseling","Coping Skills","Grief","Life Coaching","Parenting","Pregnancy, Prenatal, Postpartum","School Issues","Stress"],
+        "mentalhealth": ["Impulse Control Disorders","Mood Disorders","Thinking Disorders"]
     }]
 }

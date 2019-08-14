@@ -16,8 +16,9 @@ module.exports = function(param) {
   });
 
   router.use('/clinicians', cliniciansRoute(param));
-  router.use('/privacy', privacyRoute());
   router.use('/contact', contactRoute());
+  router.use('/privacy*', privacyRoute());
+  
 
   return router;
 };

@@ -1,0 +1,23 @@
+{
+    "locations": [{
+        "name": "",
+        "shortname": "",
+        "address": "",
+        "city": "",
+        "zip": "",
+        "county": "",
+        "state": "",
+        "image": "",
+        "googleMapsURL": ""
+    },{
+        "name": "",
+        "shortname": "",
+        "address": "",
+        "city": "",
+        "zip": "",
+        "county": "",
+        "state": "",
+        "image": "",
+        "googleMapsURL": ""
+    }]
+}

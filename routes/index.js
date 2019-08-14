@@ -3,6 +3,7 @@ var router = express.Router();
 
 const cliniciansRoute = require('./clinicians');
 const privacyRoute = require('./privacy');
+const contactRoute = require('./contact');
 
 /* GET home page. */
 
@@ -16,6 +17,7 @@ module.exports = function(param) {
 
   router.use('/clinicians', cliniciansRoute(param));
   router.use('/privacy', privacyRoute());
+  router.use('/contact', contactRoute());
 
   return router;
 };

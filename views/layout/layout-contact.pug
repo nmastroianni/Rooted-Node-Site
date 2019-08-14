@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    include includes/meta
+    // RECAPTCHA GOES HERE
+    title #{sitename} - #{page}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    include includes/offcanvas
+    block hero
+    block navigation
+      include includes/navigation
+    block content
+    block footer
+      include includes/footer
+    block modal
+      include includes/modal
+    include includes/scripts

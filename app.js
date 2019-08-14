@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var dotenv = require('dotenv');
+const bodyParser = require('body-parser');
 var configs = require('./config');
 var ClinicianService = require('./services/ClinicianService');
 
@@ -24,6 +25,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.locals.sitename = config.siteName;
 app.locals.pretty = true;
+
+// Body Parser Middleware
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -2,7 +2,13 @@ doctype html
 html
   head
     include includes/meta
-    // RECAPTCHA GOES HERE
+    script(src=`https://www.google.com/recaptcha/api.js?render=${sitekey}`)
+    script.
+      grecaptcha.ready(function() {
+        grecaptcha.execute(sitekey, {action: 'homepage'}).then(function(token) {
+        });
+      });
+
     title #{sitename} - #{page}
     link(rel='stylesheet', href='/stylesheets/style.css')
   body

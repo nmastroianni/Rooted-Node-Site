@@ -2,13 +2,21 @@
 #modal-full.uk-modal-full(uk-modal)
     .uk-modal-dialog.uk-flex.uk-flex-center.uk-flex-middle.uk-text.center(uk-height-viewport)
         button.uk-modal-close-full.uk-close-large(type="button" uk-close)
-        .uk-width-xxlarge.uk-padding-large
-            h2.uk-text-center We are here to help
-            p.uk-text-justify The best way to reach us is by phone. 
-                strong
-                    | If we are unable to answer your call, please leave us a message, and someone will return your call as soon as possible.
-            p.uk-text-center
-                | Click below to call us at 1-856-375-2440
-            p.uk-text-center
-                a.uk-button.uk-button-secondary(href="tel:1-856-375-2440")
-                    | Call Us Now
+        div(class="uk-child-width-1-2@m uk-text-center" uk-grid)
+            div
+                .uk-padding
+                    h2.uk-text-center We are here to help
+                    p.uk-text-justify The best way to reach us is by phone. 
+                        strong
+                            | If we are unable to answer your call, please leave us a message, and someone will return your call as soon as possible.
+                    p.uk-text-center
+                        | Click below to call us at 1-856-375-2440
+                    p.uk-text-center
+                        a.uk-button.uk-button-primary(href="tel:1-856-375-2440")
+                            | Call Us Now
+            div
+                .uk-padding
+                    h2 If you prefer... 
+                    p You can send us an email.
+                    a.uk-button.uk-button-secondary(href="/contact")
+                            | Email Us

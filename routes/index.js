@@ -2,8 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 const cliniciansRoute = require('./clinicians');
-const privacyRoute = require('./privacy');
-const contactRoute = require('./contact');
+const locationsRoute  = require('./locations');
+const privacyRoute    = require('./privacy');
+const contactRoute    = require('./contact');
 
 /* GET home page. */
 
@@ -16,6 +17,7 @@ module.exports = function(param) {
   });
 
   router.use('/clinicians', cliniciansRoute(param));
+  router.use('/locations', locationsRoute(param));
   router.use('/contact', contactRoute());
   router.use('/privacy*', privacyRoute());
   

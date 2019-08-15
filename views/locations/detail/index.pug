@@ -1,0 +1,25 @@
+extends ../../layout/layout
+block content
+    .uk-container.uk-padding
+        #profile-grid(class="uk-child-width-expand uk-padding" uk-grid)
+            div(class="")
+                header#profile-header
+                    if location.location.image
+                        img.uk-align-center(data-src=`/images/${location.location.image}` width="100" height="100" alt=`Image of ${location.location.address}` uk-img)
+                    else
+                        h2.uk-text-center=location.location.address
+                div
+                    h3#description.uk-text-primary Description
+                    if location.location.blurb
+                        p=location.location.blurb
+                    else
+                        p Location description pending...
+                div
+                    h3#description.uk-text-primary Directions
+                    if location.location.googleMapsURL
+                        p
+                            a(href=`${location.location.googleMapsURL}`) View on Map
+                    else
+                        p Please excuse us. Our web developer is working on getting directions ready for you.
+                        
+                    

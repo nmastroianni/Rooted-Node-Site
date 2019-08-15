@@ -7,6 +7,7 @@ var dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 var configs = require('./config');
 var ClinicianService = require('./services/ClinicianService');
+var LocationService = require('./services/LocationService');
 
 // var indexRouter = require('./routes/index');
 // var privacyRouter = require('./routes/privacy');
@@ -18,6 +19,7 @@ var app = express();
 
 var config = configs;
 var clinicianService = new ClinicianService(config.data.clinicians);
+var locationService = new LocationService(config.data.locations);
 var routes = require('./routes');
 
 // view engine setup
@@ -38,15 +40,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use( async function(req,res,next) {
   try {
-    var names = await clinicianService.getNames();
-    res.locals.clinicianNames = names;
+    var promises = [];
+    promises.push(clinicianService.getNames());
+    promises.push(locationService.getLocationNames());
+    var results = await Promise.all(promises);
+    res.locals.clinicianNames = results[0];
+    res.locals.locationNames  = results[1];
     return next();
   } catch(err) {
     return next(err);
   }
 });
 
-app.use('/', routes({clinicianService}));
+app.use('/', routes({clinicianService,locationService}));
 // app.use('/privacy*', privacyRouter());
 // app.use('/clinicians', cliniciansRouter({clinicianService}));
 

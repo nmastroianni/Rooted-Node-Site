@@ -1,0 +1,21 @@
+extends ../layout/layout
+block content
+    .uk-container.uk-padding
+        h2 Explore Our Locations
+        ul(class="uk-child-width-1-2@s" uk-grid="masonry: true")
+            each location in locationsList
+                li()
+                    a.uk-link-reset(href=`/locations/${location.shortname}`)
+                        .uk-card.uk-card-default.uk-card-hover 
+                            .uk-card-header
+                                div(class="uk-grid-small uk-flex-middle" uk-grid)
+                                    .uk-width-expand
+                                        h3.uk-card-title.uk-margin-remove-bottom=location.address
+                            .uk-card-body
+                                if location.blurb
+                                    p=location.blurb
+                                else
+                                    p 
+                                        | Click to learn more about #{location.name}
+                            .uk-card-footer.uk-text-right.uk-padding-small
+                                a.uk-button.uk-button.text(href=`/locations/${location.shortname}`) Learn more

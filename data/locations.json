@@ -2,6 +2,7 @@
     "locations": [{
         "name": "Marlton Pike",
         "shortname": "marlton-pike",
+        "blurb": "Located behind PJ Whelehan's on Route 70. There are 5 offices in this first floor suite.",
         "address": "1878 East Marlton Pike Suite 2",
         "city": "Cherry Hill",
         "zip": "08003",
@@ -12,6 +13,7 @@
     },{
         "name": "Kresson Road",
         "shortname": "kresson-road",
+        "blurb": "",
         "address": "36 Kresson Road Suite D",
         "city": "Cherry Hill",
         "zip": "08034",

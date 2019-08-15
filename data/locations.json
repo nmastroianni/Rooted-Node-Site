@@ -1,23 +1,23 @@
 {
     "locations": [{
-        "name": "",
-        "shortname": "",
-        "address": "",
-        "city": "",
-        "zip": "",
-        "county": "",
-        "state": "",
+        "name": "Marlton Pike",
+        "shortname": "marlton-pike",
+        "address": "1878 East Marlton Pike Suite 2",
+        "city": "Cherry Hill",
+        "zip": "08003",
+        "county": "Camden",
+        "state": "New Jersey",
         "image": "",
-        "googleMapsURL": ""
+        "googleMapsURL": "https://goo.gl/maps/9zLAT2be641d8hfy5"
     },{
-        "name": "",
-        "shortname": "",
-        "address": "",
-        "city": "",
-        "zip": "",
-        "county": "",
-        "state": "",
+        "name": "Kresson Road",
+        "shortname": "kresson-road",
+        "address": "36 Kresson Road Suite D",
+        "city": "Cherry Hill",
+        "zip": "08034",
+        "county": "Camden",
+        "state": "New Jersey",
         "image": "",
-        "googleMapsURL": ""
+        "googleMapsURL": "https://goo.gl/maps/B21DGiGRrNqPYxB27"
     }]
 }

@@ -2,10 +2,10 @@ doctype html
 html
   head
     include includes/meta
-    script(src=`https://www.google.com/recaptcha/api.js?render=${sitekey}`)
+    script(src='https://www.google.com/recaptcha/api.js?render=6LfRKLMUAAAAADmDW19aAw1Jtj2JJAr6dOP_meoY')
     script.
       grecaptcha.ready(function() {
-        grecaptcha.execute(sitekey, {action: 'homepage'}).then(function(token) {
+        grecaptcha.execute('6LfRKLMUAAAAADmDW19aAw1Jtj2JJAr6dOP_meoY', {action: 'homepage'}).then(function(token) {
         });
       });
 

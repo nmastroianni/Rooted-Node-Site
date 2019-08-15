@@ -51,8 +51,8 @@ module.exports = function() {
         
             // send mail with defined transport object
             let info = await transporter.sendMail({
-            from: '"Rooted Support" <support@rootedpsychotherapy.org>', // sender address
-            to: "erin@rootedpsychotherapy.org", // list of receivers
+            from: `"Rooted Support" <${process.env.EMAIL_FROM}>`, // sender address
+            to: process.env.EMAIL_RECIPIENT, // list of receivers
             subject: "New Support Request", // Subject line
             text: "Hello world?", // plain text body
             html: output // html body

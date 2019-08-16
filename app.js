@@ -26,7 +26,9 @@ var routes = require('./routes');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.locals.sitename = config.siteName;
-app.locals.pretty = true;
+if (process.env.NODE_ENV === 'development') {
+  app.locals.pretty = true;
+}
 
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({extended: false}));

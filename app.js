@@ -9,10 +9,6 @@ var configs = require('./config');
 var ClinicianService = require('./services/ClinicianService');
 var LocationService = require('./services/LocationService');
 
-// var indexRouter = require('./routes/index');
-// var privacyRouter = require('./routes/privacy');
-// var cliniciansRouter = require('./routes/clinicians');
-
 dotenv.config();
 
 var app = express();
@@ -55,8 +51,6 @@ app.use( async function(req,res,next) {
 });
 
 app.use('/', routes({clinicianService,locationService}));
-// app.use('/privacy*', privacyRouter());
-// app.use('/clinicians', cliniciansRouter({clinicianService}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

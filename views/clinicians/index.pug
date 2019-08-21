@@ -13,15 +13,15 @@ block content
                                     a(href="#" uk-filter-control="group: age") All
                         div
                             ul.uk-subnav.uk-subnav-pill(uk-margin)
-                                li(uk-filter-control="filter: [data-age*='Children']; group: age")
+                                li(uk-filter-control="filter: [data-age*='children']; group: age")
                                     a(href="#" uk-tooltip="title: 6-10; pos: bottom") Children
-                                li(uk-filter-control="filter: [data-age*='Preteens']; group: age")
+                                li(uk-filter-control="filter: [data-age*='preteens']; group: age")
                                     a(href="#" uk-tooltip="title: 11-13; pos: bottom") Preteens
-                                li(uk-filter-control="filter: [data-age*='Teenagers']; group: age")
+                                li(uk-filter-control="filter: [data-age*='teenagers']; group: age")
                                     a(href="#" uk-tooltip="title: 14-19; pos: bottom") Teenagers
-                                li(uk-filter-control="filter: [data-age*='Adults']; group: age")
+                                li(uk-filter-control="filter: [data-age*='adults']; group: age")
                                     a(href="#") Adults
-                                li(uk-filter-control="filter: [data-age*='Elders']; group: age")
+                                li(uk-filter-control="filter: [data-age*='elders']; group: age")
                                     a(href="#" uk-tooltip="title: 65+; pos: bottom") Elders
             div(class="uk-grid-small uk-flex-middle" uk-grid)    
                 .uk-width-expand
@@ -32,27 +32,35 @@ block content
                                     a(href="#" uk-filter-control="group: modality") All
                         div
                             ul.uk-subnav.uk-subnav-pill(uk-margin)
-                                li(uk-filter-control="filter: [data-modality*='Individuals']; group: modality")
+                                li(uk-filter-control="filter: [data-modality*='individuals']; group: modality")
                                     a(href="#") Individuals
-                                li(uk-filter-control="filter: [data-modality*='Couples']; group: modality")
+                                li(uk-filter-control="filter: [data-modality*='couples']; group: modality")
                                     a(href="#") Couples
-                                li(uk-filter-control="filter: [data-modality*='Family']; group: modality")
+                                li(uk-filter-control="filter: [data-modality*='family']; group: modality")
                                     a(href="#") Family
 
             ul(class="js-filter uk-child-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true")
                 each clinician in cliniciansList
-                    li(data-age=`${clinician.ageshort}` data-modality=`${clinician.modshort}`)
+                    - var ages = clinician.ages.map((val,i,arr) =>{return val.slug})
+                    - var ageshort = ages.join(' ')
+                    - var mods = clinician.modalities.map((val,i,arr) =>{return val.slug})
+                    - var modshort = mods.join(' ')
+                    li(data-age=`${ageshort}` data-modality=`${modshort}`)
                         a.uk-link-reset(href=`/clinicians/${clinician.shortname}`)
                             .uk-card.uk-card-default.uk-card-hover 
                                 .uk-card-header
                                     div(class="uk-grid-small uk-flex-middle" uk-grid)
-                                        .uk-width-auto
-                                            img.uk-border-circle(width="40" height="40" src=`/images/${clinician.image}`)
+                                        if clinician.image
+                                            .uk-width-auto
+                                                img.uk-border-circle(width="40" height="40" src=`https://admin.rootedpsychotherapy.org/wp-content/uploads/${clinician.image[0].media_details.file}`)
+                                        else
+                                            .uk-width-auto
+                                                img.uk-border-circle(width="40" height="40" src=`https://admin.rootedpsychotherapy.org/wp-content/uploads/2019/08/default-profile.png`)
                                         .uk-width-expand
                                             h3.uk-card-title.uk-margin-remove-bottom=clinician.name
                                 .uk-card-body
                                     if clinician.blurb
-                                        p=clinician.blurb
+                                        p!=clinician.blurb
                                     else
                                         p 
                                             | Click below to learn more about #{clinician.name}? 

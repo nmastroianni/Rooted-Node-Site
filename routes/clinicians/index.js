@@ -7,7 +7,7 @@ module.exports = function(param) {
   router.get('/', async function(req, res, next) {
     try {
       var promises = [];
-      promises.push(clinicianService.getClinicianShort());
+      promises.push(clinicianService.getClinicianShortApi());
 
       var results = await Promise.all(promises);
 
@@ -24,7 +24,7 @@ module.exports = function(param) {
   router.get('/:name', async (req, res, next) => {
     try {
       var promises = [];
-      promises.push(clinicianService.getClinician(req.params.name));
+      promises.push(clinicianService.getClinicianApi(req.params.name));
       var results = await Promise.all(promises);
 
       if(!results[0]) {

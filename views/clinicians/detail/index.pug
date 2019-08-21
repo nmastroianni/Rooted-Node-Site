@@ -4,95 +4,66 @@ block content
         #profile-grid(class="uk-child-width-expand uk-padding" uk-grid)
             div(class="uk-width-2-3@l")
                 header#profile-header
-                    img.uk-align-center(data-src=`/images/${clinician.clinician.image}` width="100" height="100" alt="Image of a faceless female torso" uk-img)
-                    h2.uk-text-center=clinician.clinician.name
+                    img.uk-align-center(data-src=`https://admin.rootedpsychotherapy.org/wp-content/uploads/${clinician.clinician._embedded['wp:featuredmedia'][0].media_details.file}` width="100" height="100" alt="Image of a faceless torso" uk-img)
+                    h2.uk-text-center=clinician.clinician.title.rendered
                 div
                     h3#description.uk-text-primary Description
-                    if clinician.clinician.description !== ""
-                        !=clinician.clinician.description
+                    if clinician.clinician.content.rendered
+                        !=clinician.clinician.content.rendered
                     else
                         p Clinician description pending...
-                    h3#qualifications.uk-text-primary Qualifications
-                    ul.uk-list.uk-padding-small
-                        li 
-                            h4 
-                                | Years in Practice:
-                            ul.uk-list
-                                if clinician.clinician.qualifications.years !== ""
-                                    li=clinician.clinician.qualifications.years
-                                else
-                                    li Information pending...
-                        li
-                            h4 
-                                | School:
-                            ul.uk-list
-                                if clinician.clinician.qualifications.school !== ""
-                                    li=clinician.clinician.qualifications.school
-                                else
-                                    li Information pending...
-                        li
-                            h4 License and State:
-                            if clinician.clinician.qualifications.license[0].licenseNumber !== ""
-                                ul.uk-list
-                                    each license in clinician.clinician.qualifications.license
-                                        li
-                                            =license.licenseNumber
-                                            |  -  
-                                            =license.state
-                            else 
-                                ul.uk-list 
-                                    li
-                                        |Information pending...
-
                     h3#focus.uk-text-primary Client Focus
-                    ul.uk-list.uk-padding-small
-                        li
+                    div(class="uk-child-width-1-2@m" uk-grid)
+                        div
                             h4 Ages Served
-                        if clinician.clinician.focus.age.length
-                            li
-                                ul.uk-list.uk-list-bullet
-                                    each age in clinician.clinician.focus.age
-                                        li=age
-                        else
-                            li
-                                ul
-                                    li Information pending...
-                        li 
+                            ul.uk-list.uk-padding-small                                    
+                                if clinician.ages
+                                    li
+                                        ul.uk-list.uk-list-bullet
+                                            each age in clinician.ages
+                                                li.uk-text-capitalize=age
+                                else
+                                    li
+                                        ul
+                                            li Information pending...
+                        div
                             h4 Communities
-                        if clinician.clinician.focus.communities.length
-                            li
-                                ul.uk-list.uk-list-bullet
-                                    each community in clinician.clinician.focus.communities
-                                        li=community
-                        else
-                            li
-                                ul
-                                    li Information pending...
+                                    
+                            if clinician.clinician._embedded['wp:term'][4].length
+                                li
+                                    ul.uk-list.uk-list-bullet
+                                        each community in clinician.clinician._embedded['wp:term'][4]
+                                            li=community.name
+                            else
+                                li
+                                    ul
+                                        li Information pending...
                     h3#issues.uk-text-primary Issues
-                    if clinician.clinician.issues.length
+                    if clinician.issues.length
                         ul.uk-list.uk-list-bullet.uk-padding-small
-                            each issue in clinician.clinician.issues
+                            each issue in clinician.issues
                                 li=issue
                     else
                         ul.uk-list.uk-padding-small
                             li Information Pending
                        
                     h3#approach.uk-text-primary Treatment Approach
-                    ul.uk-list.uk-padding-small
-                        li 
+                    div(class="uk-child-width-1-2@m" uk-grid)
+                        div
                             h4 Types of Therapy
-                            if clinician.clinician.approach.types.length   
-                                each ttype in clinician.clinician.approach.types
-                                    ul.uk-list.uk-list-bullet
-                                        li=ttype
-                            else
-                                ul.uk-list
-                                        li Information pending...
-
-                        li
+                            ul.uk-list.uk-padding-small
+                                li  
+                                    if clinician.clinician._embedded['wp:term'][3].length
+                                        each ttype in clinician.clinician._embedded['wp:term'][3]
+                                            ul.uk-list.uk-list-bullet
+                                                li=ttype.name
+                                    else
+                                        ul.uk-list
+                                                li Information pending...
+                        div
                             h4 Modality
-                            if clinician.clinician.approach.modalities.length   
-                                each modality in clinician.clinician.approach.modalities
+                            if clinician.modalities   
+                                each modality in clinician.modalities
                                     ul.uk-list.uk-list-bullet
                                         li=modality
                             else
@@ -105,7 +76,7 @@ block content
                     header.uk-text-center    
                         h2 About
                             br
-                            =clinician.clinician.name
+                            =clinician.clinician.title.rendered
 
                     div.uk-padding
                         ul(class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true; offset: 100")
@@ -113,8 +84,6 @@ block content
                                 a(href="#profile-header") Profile
                             li
                                 a(href="#description") Description
-                            li
-                                a(href="#qualifications") Qualifications
                             li
                                 a(href="#focus") Client Focus
                             li

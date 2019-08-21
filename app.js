@@ -39,10 +39,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use( async function(req,res,next) {
   try {
     var promises = [];
-    promises.push(clinicianService.getNames());
+    promises.push(clinicianService.getNamesApi());
     promises.push(locationService.getLocationNames());
     var results = await Promise.all(promises);
-    res.locals.clinicianNames = results[0];
+    res.locals.clinicianNames = results[0].reverse();
     res.locals.locationNames  = results[1];
     return next();
   } catch(err) {

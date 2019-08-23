@@ -15,7 +15,7 @@ class BlogService {
             }
             return returnData;
         } catch(err) {
-            return err;
+            return [];
         }
     }
 

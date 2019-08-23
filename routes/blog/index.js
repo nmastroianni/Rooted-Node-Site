@@ -21,34 +21,26 @@ module.exports = function(param) {
     });
 
     router.get('/page', async function(req, res, next) {
-        console.log('page route called');
-        try {
-            var promises = [];
-            promises.push(blogService.getBlogroll(1));
-
-            var results = await Promise.all(promises);
-            return res.render('blog', {
-            page: `Our Most Recent Posts`,
-            postList: results[0].postsData,
-            headers: results[0].headerData
-            });
-        } catch(err) {
-
+        if(req.originalUrl == '/blog/page/' || req.originalUrl == '/blog/page') {
+            res.redirect(301, "/blog");
         }
     });
 
      router.get('/page/:pageNumber', async function(req, res, next) {
-        console.log('page number route called');
             try {
                 var promises = [];
-                promises.push(blogService.getBlogroll(Number(req.params.pageNumber)));
+                promises.push(blogService.getBlogroll(req.params.pageNumber));
 
                 var results = await Promise.all(promises);
-                return res.render('blog', {
-                page: `Blog - Page ${req.params.pageNumber}`,
-                postList: results[0].postsData,
-                headers: results[0].headerData
-                });
+                if(results[0].postsData) {
+                    return res.render('blog', {
+                        page: `Blog - Page ${req.params.pageNumber}`,
+                        postList: results[0].postsData,
+                        headers: results[0].headerData
+                    });
+                } else {
+                    return next();
+                }
             } catch(err) {
 
             }
@@ -70,8 +62,5 @@ module.exports = function(param) {
 
         }
     });
-
-    
-
     return router;
 }

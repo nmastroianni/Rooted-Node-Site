@@ -1,0 +1,10 @@
+extends ../layout/layout
+block content
+    h1 Blogroll
+    p number of pages = 
+        =headers['x-wp-totalpages']
+    if postList.length
+        ul
+            each post in postList
+                a(href=`${post.slug}`)
+                    li=post.title.rendered

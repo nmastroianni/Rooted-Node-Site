@@ -31,7 +31,7 @@ class ClinicianService {
             const data = response.data;
             return data;
         } catch(err) {
-            // console.log(err);
+            console.log(err);
         }
     }
     

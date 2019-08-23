@@ -8,14 +8,16 @@ const bodyParser = require('body-parser');
 var configs = require('./config');
 var ClinicianService = require('./services/ClinicianService');
 var LocationService = require('./services/LocationService');
+const BlogService = require('./services/BlogService');
 
 dotenv.config();
 
 var app = express();
 
 var config = configs;
-var clinicianService = new ClinicianService(config.data.clinicians);
-var locationService = new LocationService(config.data.locations);
+var clinicianService  = new ClinicianService(config.data.clinicians);
+var locationService   = new LocationService(config.data.locations);
+var blogService       = new BlogService();
 var routes = require('./routes');
 
 // view engine setup
@@ -50,7 +52,7 @@ app.use( async function(req,res,next) {
   }
 });
 
-app.use('/', routes({clinicianService,locationService}));
+app.use('/', routes({clinicianService,locationService,blogService}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

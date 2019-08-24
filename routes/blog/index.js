@@ -56,7 +56,7 @@ module.exports = function(param) {
             }
             return res.render('blog/post', {
                 page: results[0][0].title.rendered,
-                post: results[0]
+                post: results[0][0]
             });
         }   catch(err) {
 

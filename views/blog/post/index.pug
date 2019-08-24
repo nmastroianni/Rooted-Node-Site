@@ -1,3 +1,9 @@
 extends ../../layout/layout
 block content
-    h1 Blog Post
+    - const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+    - const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+    div(class="uk-container uk-padding uk-width-2-3@m")
+        if post._embedded['wp:featuredmedia']
+            h1 Header Image Here
+        h1=post.title.rendered
+        p!=post.content.rendered

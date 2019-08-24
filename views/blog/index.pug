@@ -1,5 +1,7 @@
 extends ../layout/layout
 block content
+    - const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+    - const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
     .uk-container.uk-padding
         h1.uk-text-center Check Out Our Most Recent Posts
     
@@ -7,22 +9,24 @@ block content
             div(class="uk-child-width-1-2@s uk-child-width-1-3@xl" uk-grid="masonry: true")
                 each post in postList
                     div
-                        div(class="uk-card uk-card-default uk-card-hover uk-card-large")
-                            .uk-card-header
+                        div(class="uk-card uk-card-default uk-card-hover")
+                            if post._embedded['wp:featuredmedia']
+                                .uk-card-media-top
+                                    div(class="uk-background-blend-multiply uk-background-primary uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover" data-src=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.source_url}` uk-img alt=`${post._embedded['wp:featuredmedia'][0].alt_text}` width="580" height="350")
+                            .uk-card-body.uk-padding
                                 h3.uk-card-title.uk-margin-remove-bottom=post.title.rendered
                                 - var d = new Date(post.date)
-                                - const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
-                                - const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
                                 - const dayIndex = d.getDay()
                                 - const monthIndex = d.getMonth()
                                 - var dayName = days[dayIndex]
                                 - var monthName = months[monthIndex]
                                 - var year = d.getFullYear()
-                                - var displayDate = dayName + " " + monthName + " " + year
+                                - var displayDate = dayName + " " + monthName + " " + d.getDate() + ", " + year + " by " + post._embedded.author[0].name
                                 p.uk-text-meta.uk-margin-remove-top
                                     time(datetime=`${post.date}`)=displayDate
-                            if post._embedded['wp:featuredmedia']
-                                .uk-card-media
-                                    img(data-src=`` uk-img alt=``)
+                                p!=post.excerpt.rendered
+                                .uk-card-footer.uk-text-right
+                                    a(href=`/blog/${post.slug}`) Read More
+                            
                         
     

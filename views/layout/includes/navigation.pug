@@ -13,24 +13,26 @@
             //- Begin Navbar Right
             .uk-navbar-right
                 ul.uk-navbar-nav
-                    li(class="uk-visible@m uk-active")
+                    li(class=(active=='home') ? 'uk-active uk-visible@m' : 'uk-visible@m')
                         a(href="/") Home
-                    li(class="uk-visible@m")
+                    li(class=(active=='team') ? 'uk-active uk-visible@m' : 'uk-visible@m')
                         a(href="#") Our Team
                         .uk-navbar-dropdown
                             ul.uk-nav.uk-navbar-dropdown-nav
                                 li
                                     a(href="/clinicians") All Clinicians
                                     each clinician in clinicianNames
-                                        a(href=`/clinicians/${clinician.shortname}`)= clinician.name
+                                        a(href=`/clinicians/${clinician.shortname}`)=clinician.name
 
-                    li(class="uk-visible@m")
+                    li(class=(active=='locations') ? 'uk-active uk-visible@m' : 'uk-visible@m')
                         a(href="#") Our Locations
                         .uk-navbar-dropdown
                             ul.uk-nav.uk-navbar-dropdown-nav
                                 li
                                     each location in locationNames
                                         a(href=`/locations/${location.shortname}`)= location.name
+                    li(class=(active=='blog') ? 'uk-active uk-visible@m' : 'uk-visible@m')
+                        a(href="/blog") Blog
                     li(class="uk-hidden@m")
                         a.uk-navbar-toggle(uk-toggle="target: #offcanvas-reveal" href="#" uk-navbar-toggle-icon)
                             span Menu

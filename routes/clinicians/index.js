@@ -12,6 +12,7 @@ module.exports = function(param) {
       var results = await Promise.all(promises);
 
       return res.render('clinicians', {
+        active: "team",
         page: 'All Clinicians',
         cliniciansList: results[0]
       });
@@ -31,11 +32,12 @@ module.exports = function(param) {
         return next();
       }
       return res.render('clinicians/detail', {
+        active: "team",
         page: req.params.name,
         clinician: results[0]
       });
     } catch(err) {
-
+      return next(err);
     }
     
   });

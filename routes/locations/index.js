@@ -12,6 +12,7 @@ module.exports = function(param) {
       var results = await Promise.all(promises);
 
       return res.render('locations', {
+        active: "locations",
         page: 'All Locations',
         locationsList: results[0]
       });
@@ -31,11 +32,12 @@ module.exports = function(param) {
         return next();
       }
       return res.render('locations/detail', {
+        active: "locations",
         page: req.params.name,
         location: results[0]
       });
     } catch(err) {
-
+      return next(err)
     }
     
   });

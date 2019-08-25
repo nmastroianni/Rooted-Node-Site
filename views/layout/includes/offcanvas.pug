@@ -2,9 +2,9 @@
     .uk-offcanvas-bar.uk-flex.uk-flex-column.uk-text-center
         button.uk-offcanvas-close.uk-close-large(type="button" uk-close="")
         ul.uk-nav.uk-nav-primary.uk-nav-center.uk-margin-auto-vertical.uk-nav-parent-icon(uk-nav="")
-            li.uk-active
+            li(class=(active=='home') ? 'uk-active' : '')
                 a(href="/") Home
-            li.uk-parent
+            li(class=(active=='team') ? 'uk-active uk-parent' : 'uk-parent')
                 a(href="#") Our Team
                 ul.uk-nav-sub
                     li
@@ -12,13 +12,14 @@
                     each clinician in clinicianNames
                         li
                             a(href=`/clinicians/${clinician.shortname}`)= clinician.name        
-            li.uk-parent
+            li(class=(active=='locations') ? 'uk-active uk-parent' : 'uk-parent')
                 a(href="#") Locations
                 ul.uk-nav-sub
-                    li
-                        a(href="#") Marlton Pike, Cherry Hill
-                    li
-                        a(href="#") Kresson Road, Cherry Hill
+                    each location in locationNames
+                        li
+                            a(href=`/locations/${location.shortname}`)= location.name
+            li(class=(active=='blog') ? 'uk-active uk-parent' : 'uk-parent')
+                a(href="/blog") Blog
         div
             .uk-grid-small.uk-child-width-auto.uk-flex-inline(uk-grid="")
                 div

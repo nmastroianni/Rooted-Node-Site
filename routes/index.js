@@ -13,6 +13,7 @@ module.exports = function(param) {
   const { clinicianService } = param;
   router.get('/', function(req, res, next) {
     res.render('index', {
+      active: "home",
       page: "Home"
     });
   });

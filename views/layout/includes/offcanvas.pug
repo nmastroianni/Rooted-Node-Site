@@ -18,7 +18,7 @@
                     each location in locationNames
                         li
                             a(href=`/locations/${location.shortname}`)= location.name
-            li(class=(active=='blog') ? 'uk-active uk-parent' : 'uk-parent')
+            li(class=(active=='blog') ? 'uk-active' : '')
                 a(href="/blog") Blog
         div
             .uk-grid-small.uk-child-width-auto.uk-flex-inline(uk-grid="")

@@ -2,8 +2,37 @@ extends ../../layout/layout
 block content
     - const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
     - const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+    - var d = new Date(post.date)
+    - const dayIndex = d.getDay()
+    - const monthIndex = d.getMonth()
+    - var dayName = days[dayIndex]
+    - var monthName = months[monthIndex]
+    - var year = d.getFullYear()
+    - var displayDate = dayName + " " + monthName + " " + d.getDate() + ", " + year
     div(class="uk-container uk-padding uk-width-2-3@m")
-        if post._embedded['wp:featuredmedia']
-            h1 Header Image Here
-        h1=post.title.rendered
-        p!=post.content.rendered
+        article.uk-article
+            h1.uk-article-title=post.title.rendered
+            p.uk-article-meta
+                | Written by 
+                =post._embedded.author[0].name
+                |  on 
+                =displayDate
+            if post._embedded['wp:featuredmedia']
+                img(data-src=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url}` width="900" height="100" alt=`${post._embedded['wp:featuredmedia'][0].alt_text}` uk-img)
+            p!=post.content.rendered
+        div(class="uk-card uk-card-secondary  uk-padding-small")
+            div(class="uk-card-header uk-padding-small")
+                div(class="uk-grid-small uk-flex-middle" uk-grid)
+                    div(class="uk-width-auto")
+                        img(class="uk-border-circle" data-src=`${post._embedded.author[0].avatar_urls['48']}` width="40" height="40" uk-img)
+                    div(class="uk-width-expand")
+                        h3(class="uk-card-title uk-margin-remove-bottom")
+                            =post._embedded.author[0].name
+                        p.uk-text-meta.uk-margin-remove-top Article Author
+            
+            div(class="uk-card-body uk-padding-small")
+                p=post._embedded.author[0].description
+            div(class="uk-card-footer uk-padding-small uk-text-right")
+                a(href=`/clinicians/${post._embedded.author[0].slug}` class="uk-button uk-button-text") 
+                    | Learn more about 
+                    =post._embedded.author[0].name

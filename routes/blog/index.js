@@ -10,10 +10,12 @@ module.exports = function(param) {
             promises.push(blogService.getBlogroll(1));
 
             var results = await Promise.all(promises);
+            
             return res.render('blog', {
                 active: "blog",
                 page: 'Our Most Recent Posts',
-                postList: results[0].postsData,
+                postList: results[0].notStickyPostsData,
+                stickyList: results[0].stickyPostsData,
                 headers: results[0].headerData
             });
         } catch(err) {

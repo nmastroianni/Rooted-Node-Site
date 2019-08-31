@@ -33,6 +33,12 @@
                                         a(href=`/locations/${location.shortname}`)= location.name
                     li(class=(active=='blog') ? 'uk-active uk-visible@m' : 'uk-visible@m')
                         a(href="/blog") Blog
+                        .uk-navbar-dropdown
+                            ul.uk-nav.uk-navbar-dropdown-nav
+                                li 
+                                    a(href="/blog/category/clients") Clients
+                                li 
+                                    a(href="/blog/category/professionals") Professionals
                     li(class="uk-hidden@m")
                         a.uk-navbar-toggle(uk-toggle="target: #offcanvas-reveal" href="#" uk-navbar-toggle-icon)
                             span Menu

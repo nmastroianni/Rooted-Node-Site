@@ -48,8 +48,8 @@ block content
                                     time(datetime=`${post.date}`)=displayDate
                                 p!=post.excerpt.rendered
                                 .uk-card-footer.uk-text-right
-                                    a(href=`/blog/${post.slug}`) Read More
-        else
+                                    a(href=`/blog/${post.slug}` class="uk-button uk-button-secondary") Read More
+        if !postList.length && !stickyList.length
             p.uk-text-center Please check back later. We're working on our first post now.                    
                         
     

@@ -19,7 +19,7 @@ module.exports = function(param) {
                 headers: results[0].headerData
             });
         } catch(err) {
-
+            return next(err);
         }
     });
 
@@ -98,6 +98,60 @@ module.exports = function(param) {
             return next(err);
         }
     });
+
+    // *** Author Routes Below
+
+    router.get('/author', async function(req, res, next) {
+        if(req.originalUrl == '/blog/author/' || req.originalUrl == '/blog/author') {
+            res.redirect(301, "/clinicians");
+        }
+    });
+
+    router.get('/author/:authName', async function(req, res, next) {
+        try {
+            var promises = [];
+            promises.push(blogService.getBlogroll(1,null,req.params.catName));
+
+            var results = await Promise.all(promises);
+            if(results[0].postsData) {
+                return res.render('blog', {
+                    active: "blog",
+                    page: `Blog Author - ${req.params.authName}`,
+                    postList: results[0].notStickyPostsData,
+                    stickyList: results[0].stickyPostsData,
+                    headers: results[0].headerData
+                });
+            } else {
+                return next();
+            }
+        } catch(err) {
+            return next(err);
+        }
+    });
+
+    router.get('/author/:authName/page/:pageNumber', async function(req, res, next) {
+        try {
+            var promises = [];
+            promises.push(blogService.getBlogroll(req.params.pageNumber,req.params.authName));
+
+            var results = await Promise.all(promises);
+            if(results[0].postsData) {
+                return res.render('blog', {
+                    active: "blog",
+                    page: `Blog Author - ${req.params.catName} Page ${req.params.pageNumber}`,
+                    postList: results[0].notStickyPostsData,
+                    stickyList: results[0].stickyPostsData,
+                    headers: results[0].headerData
+                });
+            } else {
+                return next();
+            }
+        } catch(err) {
+            return next(err);
+        }
+    });
+
+    // *** Individual Post Route Below
 
     router.get('/:slug', async (req, res, next) => {
         try {

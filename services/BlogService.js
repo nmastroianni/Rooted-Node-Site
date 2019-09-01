@@ -2,19 +2,26 @@ const axios = require('axios');
 
 class BlogService {
 
-    async getBlogroll(page,category) {
+    async getBlogroll(page,category,author) {
         
         try {
-            if(!category) {
+            if(!category && !author) {
                 var url = `https://admin.rootedpsychotherapy.org/wp-json/wp/v2/posts?page=${page}&_embed=true`;
-            } else {
+            } else if (category && !author){
                 var idResponse = await axios.get(`https://admin.rootedpsychotherapy.org/wp-json/wp/v2/categories?slug=${category}`);
                 var catID = idResponse.data[0].id;
                 if(!idResponse.data[0].id) {
                     return next(err);
                 }
                 var url = `https://admin.rootedpsychotherapy.org/wp-json/wp/v2/posts?page=${page}&categories=${catID}&_embed=true`;
-            }    
+            } else if (author && !category) {
+                var idResponse = await axios.get(`https://admin.rootedpsychotherapy.org/wp-json/wp/v2/users?slug=${author}`);
+                var authID = idResponse.data[0].id;
+                if(!idResponse.data[0].id) {
+                    return next(err);
+                }
+                var url = `https://admin.rootedpsychotherapy.org/wp-json/wp/v2/posts?page=${page}&users=${authID}&_embed=true`;
+            }
             function isSticky(post) {
                 return post.sticky === true;
             }

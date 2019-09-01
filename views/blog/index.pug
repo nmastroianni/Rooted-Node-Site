@@ -20,9 +20,10 @@ block content
                                 - var dayName = days[dayIndex]
                                 - var monthName = months[monthIndex]
                                 - var year = d.getFullYear()
-                                - var displayDate = dayName + " " + monthName + " " + d.getDate() + ", " + year + " by " + post._embedded.author[0].name
+                                - var displayDate = dayName + " " + monthName + " " + d.getDate() + ", " + year + " by "
                                 p.uk-text-meta.uk-margin-remove-top
                                     time(datetime=`${post.date}`)=displayDate
+                                    a(href="#")=post._embedded.author[0].name
                                 p!=post.excerpt.rendered
                                 .uk-card-footer.uk-text-right
                                     a(href=`/blog/${post.slug}`) Read More
@@ -43,9 +44,10 @@ block content
                                 - var dayName = days[dayIndex]
                                 - var monthName = months[monthIndex]
                                 - var year = d.getFullYear()
-                                - var displayDate = dayName + " " + monthName + " " + d.getDate() + ", " + year + " by " + post._embedded.author[0].name
+                                - var displayDate = dayName + " " + monthName + " " + d.getDate() + ", " + year + " by "
                                 p.uk-text-meta.uk-margin-remove-top
                                     time(datetime=`${post.date}`)=displayDate
+                                    a(href=`/blog/author/${post._embedded.author[0].slug}`)=post._embedded.author[0].name
                                 p!=post.excerpt.rendered
                                 .uk-card-footer.uk-text-right
                                     a(href=`/blog/${post.slug}` class="uk-button uk-button-secondary") Read More

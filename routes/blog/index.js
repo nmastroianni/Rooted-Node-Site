@@ -110,7 +110,7 @@ module.exports = function(param) {
     router.get('/author/:authName', async function(req, res, next) {
         try {
             var promises = [];
-            promises.push(blogService.getBlogroll(1,null,req.params.catName));
+            promises.push(blogService.getBlogroll(1,null,req.params.authName));
 
             var results = await Promise.all(promises);
             if(results[0].postsData) {

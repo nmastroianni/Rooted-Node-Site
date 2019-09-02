@@ -65,6 +65,7 @@ module.exports = function(param) {
                 return res.render('blog', {
                     active: "blog",
                     page: `Blog Category - ${req.params.catName}`,
+                    pageType: "category",
                     postList: results[0].notStickyPostsData,
                     stickyList: results[0].stickyPostsData,
                     headers: results[0].headerData
@@ -87,6 +88,7 @@ module.exports = function(param) {
                 return res.render('blog', {
                     active: "blog",
                     page: `Blog Category - ${req.params.catName} Page ${req.params.pageNumber}`,
+                    pageType: "category",
                     postList: results[0].notStickyPostsData,
                     stickyList: results[0].stickyPostsData,
                     headers: results[0].headerData
@@ -117,6 +119,7 @@ module.exports = function(param) {
                 return res.render('blog', {
                     active: "blog",
                     page: `Blog Author - ${req.params.authName}`,
+                    pageType: "author",
                     postList: results[0].notStickyPostsData,
                     stickyList: results[0].stickyPostsData,
                     headers: results[0].headerData
@@ -139,6 +142,7 @@ module.exports = function(param) {
                 return res.render('blog', {
                     active: "blog",
                     page: `Blog Author - ${req.params.catName} Page ${req.params.pageNumber}`,
+                    pageType: "author",
                     postList: results[0].notStickyPostsData,
                     stickyList: results[0].stickyPostsData,
                     headers: results[0].headerData

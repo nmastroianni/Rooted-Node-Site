@@ -3,7 +3,16 @@ block content
     - const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
     - const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
     .uk-container.uk-padding
-        h1.uk-text-center Check Out Our Most Recent Posts
+        if !pageType
+            h1.uk-text-center Check Out Our Most Recent Posts
+        if postList.length && pageType == "category"
+            h1.uk-text-center 
+                | Check Out Our Most Recent Posts for 
+                =postList[0]._embedded['wp:term'][0][0].name
+        if postList.length && pageType == "author"
+            h1.uk-text-center 
+                | Check Out Our Most Recent Posts by 
+                =postList[0]._embedded.author[0].name
         if stickyList && stickyList.length
             div(class="uk-child-width-1-1@s" uk-grid="masonry: true")
                 each post in stickyList

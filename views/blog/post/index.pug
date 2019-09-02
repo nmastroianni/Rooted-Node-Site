@@ -11,10 +11,11 @@ block content
     - var displayDate = dayName + " " + monthName + " " + d.getDate() + ", " + year
     div(class="uk-container uk-padding uk-width-2-3@m")
         article.uk-article
-            h1.uk-article-title=post.title.rendered
+            h1.uk-article-title!=post.title.rendered
             p.uk-article-meta
                 | Written by 
-                =post._embedded.author[0].name
+                a(href=`/blog/author/${post._embedded.author[0].slug}`)
+                    =post._embedded.author[0].name
                 |  on 
                 =displayDate
             if post._embedded['wp:featuredmedia']

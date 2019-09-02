@@ -14,6 +14,8 @@ module.exports = function(param) {
             return res.render('blog', {
                 active: "blog",
                 page: 'Our Most Recent Posts',
+                pageType: "blog",
+                pageNumber: 1,
                 postList: results[0].notStickyPostsData,
                 stickyList: results[0].stickyPostsData,
                 headers: results[0].headerData
@@ -37,7 +39,10 @@ module.exports = function(param) {
                 var results = await Promise.all(promises);
                 if(results[0].postsData) {
                     return res.render('blog', {
+                        active: "blog",
                         page: `Blog - Page ${req.params.pageNumber}`,
+                        pageType: "blog",
+                        pageNumber: req.params.pageNumber,
                         postList: results[0].postsData,
                         headers: results[0].headerData
                     });
@@ -66,6 +71,8 @@ module.exports = function(param) {
                     active: "blog",
                     page: `Blog Category - ${req.params.catName}`,
                     pageType: "category",
+                    catSlug: req.params.catName,
+                    pageNumber: 1,
                     postList: results[0].notStickyPostsData,
                     stickyList: results[0].stickyPostsData,
                     headers: results[0].headerData
@@ -89,6 +96,8 @@ module.exports = function(param) {
                     active: "blog",
                     page: `Blog Category - ${req.params.catName} Page ${req.params.pageNumber}`,
                     pageType: "category",
+                    catSlug: req.params.catName,
+                    pageNumber: req.params.pageNumber,
                     postList: results[0].notStickyPostsData,
                     stickyList: results[0].stickyPostsData,
                     headers: results[0].headerData
@@ -115,11 +124,14 @@ module.exports = function(param) {
             promises.push(blogService.getBlogroll(1,null,req.params.authName));
 
             var results = await Promise.all(promises);
+            console.log(results[0].headerData)
             if(results[0].postsData) {
                 return res.render('blog', {
                     active: "blog",
                     page: `Blog Author - ${req.params.authName}`,
                     pageType: "author",
+                    authSlug: req.params.authName,
+                    pageNumber: 1,
                     postList: results[0].notStickyPostsData,
                     stickyList: results[0].stickyPostsData,
                     headers: results[0].headerData
@@ -143,6 +155,8 @@ module.exports = function(param) {
                     active: "blog",
                     page: `Blog Author - ${req.params.catName} Page ${req.params.pageNumber}`,
                     pageType: "author",
+                    authSlug: req.params.authName,
+                    pageNumber: req.params.pageNumber,
                     postList: results[0].notStickyPostsData,
                     stickyList: results[0].stickyPostsData,
                     headers: results[0].headerData

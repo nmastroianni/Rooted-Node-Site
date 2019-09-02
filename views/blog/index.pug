@@ -22,7 +22,9 @@ block content
                                 .uk-card-media-top
                                     div(class="uk-background-blend-multiply uk-background-primary uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover" data-src=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.source_url}` uk-img alt=`${post._embedded['wp:featuredmedia'][0].alt_text}` width="580" height="350")
                             .uk-card-body.uk-padding
-                                h3.uk-card-title.uk-margin-remove-bottom!=post.title.rendered
+                                h3(class="uk-card-title uk-margin-remove-bottom" style="word-wrap: breakword; -ms-word-wrap: break-word;")
+                                    a(href=`/blog/${post.slug}` class="uk-button uk-button-text uk-text-large")
+                                        !=post.title.rendered
                                 - var d = new Date(post.date)
                                 - const dayIndex = d.getDay()
                                 - const monthIndex = d.getMonth()
@@ -46,7 +48,9 @@ block content
                                 .uk-card-media-top
                                     div(class="uk-background-blend-multiply uk-background-primary uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover" data-src=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.source_url}` uk-img alt=`${post._embedded['wp:featuredmedia'][0].alt_text}` width="580" height="350")
                             .uk-card-body.uk-padding
-                                h3.uk-card-title.uk-margin-remove-bottom!=post.title.rendered
+                                h3(class="uk-card-title uk-margin-remove-bottom" style="word-wrap: breakword; -ms-word-wrap: break-word;")
+                                    a(href=`/blog/${post.slug}` class="uk-button uk-button-text uk-text-large")
+                                        !=post.title.rendered
                                 - var d = new Date(post.date)
                                 - const dayIndex = d.getDay()
                                 - const monthIndex = d.getMonth()
@@ -60,6 +64,28 @@ block content
                                 p!=post.excerpt.rendered
                                 .uk-card-footer.uk-text-right
                                     a(href=`/blog/${post.slug}` class="uk-button uk-button-secondary") Read More
+            if Number(headers['x-wp-totalpages']) > 1
+            -var olderPosts = Number(pageNumber)+1
+            -var newerPosts = Number(pageNumber)-1
+                if pageType == "blog"
+                    - var route = "/blog/page/"
+                if pageType == "author"
+                    - var route = `/blog/author/${authSlug}/page/`
+                if pageType == "category"
+                    - var route = `/blog/category/${catSlug}/page/`
+            
+                ul(class="uk-pagination uk-flex-center" uk-margin)
+                    if headers['x-wp-totalpages'] > Number(pageNumber)
+                        li
+                            a(href=`${route}${olderPosts}`)
+                                span(class="uk-margin-small-right" uk-pagination-previous) 
+                                | Older Posts
+                    if Number(pageNumber) > 1
+                        li
+                            a(href=`${route}${newerPosts}`)
+                                | Newer Posts
+                                span(uk-pagination-next class="uk-margin-small-left")
+
         if !postList.length && !stickyList.length
             p.uk-text-center Please check back later. We're working on our first post now.                    
                         

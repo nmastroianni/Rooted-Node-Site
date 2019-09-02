@@ -26,14 +26,12 @@ block content
                             h4 Communities
                                     
                             if clinician.clinician._embedded['wp:term'][4].length
-                                li
-                                    ul.uk-list.uk-list-bullet
-                                        each community in clinician.clinician._embedded['wp:term'][4]
-                                            li=community.name
+                                ul.uk-list.uk-padding-small.uk-list-bullet
+                                    each community in clinician.clinician._embedded['wp:term'][4]
+                                        li=community.name
                             else
-                                li
-                                    ul
-                                        li Information pending...
+                                ul
+                                    li Information pending...
                     h3#issues.uk-text-primary Issues
                     if clinician.issues.length
                         ul.uk-list.uk-list-bullet.uk-padding-small
@@ -57,7 +55,7 @@ block content
                             h4 Modality
                             if clinician.modalities   
                                 each modality in clinician.modalities
-                                    ul.uk-list.uk-list-bullet
+                                    ul.uk-list.uk-list-bullet.uk-padding-small
                                         li=modality
                             else
                                 ul.uk-list

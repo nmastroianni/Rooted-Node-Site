@@ -16,16 +16,12 @@ block content
                     div(class="uk-child-width-1-2@m" uk-grid)
                         div
                             h4 Ages Served
-                            ul.uk-list.uk-padding-small                                    
+                            ul.uk-list.uk-padding-small.uk-list-bullet                                    
                                 if clinician.ages
-                                    li
-                                        ul.uk-list.uk-list-bullet
-                                            each age in clinician.ages
-                                                li.uk-text-capitalize=age
+                                    each age in clinician.ages
+                                        li.uk-text-capitalize=age
                                 else
-                                    li
-                                        ul
-                                            li Information pending...
+                                    li Information pending...
                         div
                             h4 Communities
                                     
@@ -51,15 +47,12 @@ block content
                     div(class="uk-child-width-1-2@m" uk-grid)
                         div
                             h4 Types of Therapy
-                            ul.uk-list.uk-padding-small
-                                li  
-                                    if clinician.clinician._embedded['wp:term'][3].length
-                                        each ttype in clinician.clinician._embedded['wp:term'][3]
-                                            ul.uk-list.uk-list-bullet
-                                                li=ttype.name
+                            ul.uk-list.uk-padding-small.uk-list-bullet  
+                                if clinician.clinician._embedded['wp:term'][3].length
+                                    each ttype in clinician.clinician._embedded['wp:term'][3]
+                                        li=ttype.name
                                     else
-                                        ul.uk-list
-                                                li Information pending...
+                                        li Information pending...
                         div
                             h4 Modality
                             if clinician.modalities   

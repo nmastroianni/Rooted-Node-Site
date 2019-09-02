@@ -53,9 +53,9 @@ block content
                                         li Information pending...
                         div
                             h4 Modality
-                            if clinician.modalities   
-                                each modality in clinician.modalities
-                                    ul.uk-list.uk-list-bullet.uk-padding-small
+                            if clinician.modalities 
+                                ul.uk-list.uk-list-bullet.uk-padding-small  
+                                    each modality in clinician.modalities
                                         li=modality
                             else
                                 ul.uk-list

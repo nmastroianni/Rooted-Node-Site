@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var dotenv = require('dotenv');
 const bodyParser = require('body-parser');
+const compression = require('compression');
+const helmet = require('helmet');
 var configs = require('./config');
 var ClinicianService = require('./services/ClinicianService');
 var LocationService = require('./services/LocationService');
@@ -18,6 +20,8 @@ var config = configs;
 var clinicianService  = new ClinicianService(config.data.clinicians);
 var locationService   = new LocationService(config.data.locations);
 var blogService       = new BlogService();
+app.use(compression()); // Compress all routes
+app.use(helmet());
 var routes = require('./routes');
 
 // view engine setup

@@ -38,7 +38,7 @@ block content
                             each issue in clinician.issues
                                 li=issue
                     else
-                        ul.uk-list.uk-padding-small
+                        ul.uk-list.uk-list-bullet.uk-padding-small
                             li Information Pending
                        
                     h3#approach.uk-text-primary Treatment Approach
@@ -49,8 +49,8 @@ block content
                                 if clinician.clinician._embedded['wp:term'][3].length
                                     each ttype in clinician.clinician._embedded['wp:term'][3]
                                         li=ttype.name
-                                    else
-                                        li Information pending...
+                                else
+                                    li Information pending...
                         div
                             h4 Modality
                             if clinician.modalities 

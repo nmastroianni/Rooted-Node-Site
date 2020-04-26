@@ -22,7 +22,13 @@ block content
                     h3#description.uk-text-primary Directions
                     if location.location.googleMapsURL
                         p
-                            a(href=`${location.location.googleMapsURL}`) View on Map
+                            a(href=`${location.location.appleMapsURL}`) Find Us on Apple Maps
+                    else
+                        p Please excuse us. Our web developer is working on getting Apple Maps directions ready for you.
+                    
+                    if location.location.googleMapsURL
+                        p
+                            a(href=`${location.location.googleMapsURL}`) Find Us on Google Maps
                     else
                         p Please excuse us. Our web developer is working on getting directions ready for you.
                 div

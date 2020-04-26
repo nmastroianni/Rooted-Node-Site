@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    block meta
+    title #{sitename} - #{page}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    include includes/offcanvas
+    block hero
+    block navigation
+      include includes/navigation
+    block content
+    block footer
+      include includes/footer
+    block modal
+      include includes/modal
+    include includes/scripts

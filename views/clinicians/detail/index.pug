@@ -12,54 +12,43 @@ block content
                         !=clinician.clinician.content.rendered
                     else
                         p Clinician description pending...
-                    h3#focus.uk-text-primary Client Focus
-                    div(class="uk-child-width-1-2@m" uk-grid)
-                        div
-                            h4 Ages Served
-                            ul.uk-list.uk-padding-small.uk-list-bullet                                    
-                                if clinician.ages
-                                    each age in clinician.ages
-                                        li.uk-text-capitalize=age
-                                else
-                                    li Information pending...
-                        div
-                            h4 Communities
-                                    
+                    if clinician.ages || clinician.clinician._embedded['wp:term'][4].length
+                        h3#focus.uk-text-primary Client Focus
+                        div(class="uk-child-width-1-2@m" uk-grid)
+                            div
+                                h4 Ages Served
+                                ul.uk-list.uk-padding-small.uk-list-bullet                                    
+                                    if clinician.ages
+                                        each age in clinician.ages
+                                            li.uk-text-capitalize=age
+                                    else
+                                        li Information pending...
                             if clinician.clinician._embedded['wp:term'][4].length
-                                ul.uk-list.uk-padding-small.uk-list-bullet
-                                    each community in clinician.clinician._embedded['wp:term'][4]
-                                        li=community.name
-                            else
-                                ul
-                                    li Information pending...
-                    h3#issues.uk-text-primary Issues
+                                div
+                                    h4 Communities
+                                    ul.uk-list.uk-padding-small.uk-list-bullet
+                                        each community in clinician.clinician._embedded['wp:term'][4]
+                                            li=community.name
                     if clinician.issues.length
+                        h3#issues.uk-text-primary Issues
                         ul.uk-list.uk-list-bullet.uk-padding-small
                             each issue in clinician.issues
                                 li=issue
-                    else
-                        ul.uk-list.uk-list-bullet.uk-padding-small
-                            li Information Pending
-                       
-                    h3#approach.uk-text-primary Treatment Approach
-                    div(class="uk-child-width-1-2@m" uk-grid)
-                        div
-                            h4 Types of Therapy
-                            ul.uk-list.uk-padding-small.uk-list-bullet  
-                                if clinician.clinician._embedded['wp:term'][3].length
-                                    each ttype in clinician.clinician._embedded['wp:term'][3]
-                                        li=ttype.name
-                                else
-                                    li Information pending...
-                        div
-                            h4 Modality
-                            if clinician.modalities 
-                                ul.uk-list.uk-list-bullet.uk-padding-small  
-                                    each modality in clinician.modalities
-                                        li=modality
-                            else
-                                ul.uk-list
-                                    li Information pending...
+                    if clinician.clinician._embedded['wp:term'][3].length || clinician.modalities
+                        h3#approach.uk-text-primary Treatment Approach
+                        div(class="uk-child-width-1-2@m" uk-grid)
+                            if clinician.clinician._embedded['wp:term'][3].length
+                                div
+                                    h4 Types of Therapy
+                                    ul.uk-list.uk-padding-small.uk-list-bullet  
+                                        each ttype in clinician.clinician._embedded['wp:term'][3]
+                                            li=ttype.name
+                            if clinician.modalities     
+                                div
+                                    h4 Modality
+                                    ul.uk-list.uk-list-bullet.uk-padding-small  
+                                        each modality in clinician.modalities
+                                            li=modality
 
 
             div(class="uk-visible@l uk-width-1-3@l uk-padding")
@@ -77,8 +66,10 @@ block content
                                 a(href="#description") Description
                             li
                                 a(href="#focus") Client Focus
-                            li
-                                a(href="#issues") Issues
-                            li
-                                a(href="#approach") Treatment Approach
+                            if clinician.issues.length    
+                                li
+                                    a(href="#issues") Issues
+                            if clinician.clinician._embedded['wp:term'][3].length || clinician.modalities 
+                                li
+                                    a(href="#approach") Treatment Approach
 

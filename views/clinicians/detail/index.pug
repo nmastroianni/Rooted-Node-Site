@@ -4,7 +4,7 @@ block content
         #profile-grid(class="uk-child-width-expand uk-padding" uk-grid)
             div(class="uk-width-2-3@l")
                 header#profile-header
-                    img.uk-align-center(data-src=`https://admin.rootedpsychotherapy.org/wp-content/uploads/${clinician.clinician._embedded['wp:featuredmedia'][0].media_details.file}` width="100" height="100" alt="Image of a faceless torso" uk-img)
+                    img.uk-align-center.uk-border-circle(data-src=`https://admin.rootedpsychotherapy.org/wp-content/uploads/${clinician.clinician._embedded['wp:featuredmedia'][0].media_details.file}` width="100" height="100" alt="Image of a faceless torso" uk-img)
                     h2.uk-text-center=clinician.clinician.title.rendered
                 div
                     h3#description.uk-text-primary Description

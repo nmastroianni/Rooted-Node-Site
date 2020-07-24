@@ -64,6 +64,8 @@ class ClinicianService {
         var clinician = data.find(function(clinician) {
             return clinician.slug === shortname;
         });
+        //If clinician not found, return 404 
+        if(!clinician) return null;
         agesArr         = clinician._embedded['wp:term'][1];
         issuesArr       = clinician._embedded['wp:term'][2];
         modalitiesArr   = clinician._embedded['wp:term'][0];

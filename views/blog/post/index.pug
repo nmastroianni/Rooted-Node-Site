@@ -18,12 +18,12 @@ block meta
     meta(property="article:published_time" content=post.date)
     meta(property="article:modified_time" content=post.modified)
     meta(property="og:updated_time" content=post.modified)
-    meta(property="og:image" content=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url}`)
-    meta(property="og:image:secure_url" content=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url}`)
+    meta(property="og:image" content=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}`)
+    meta(property="og:image:secure_url" content=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}`)
     meta(name="twitter:card" content="summary_large_image")
     meta(name="twitter:description" content=post.excerpt.rendered)
     meta(name="twitter:title" content=post.title.rendered)
-    meta(name="twitter:image" content=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url}`)
+    meta(name="twitter:image" content=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}`)
     link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
     link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
     link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
@@ -58,7 +58,7 @@ block content
     - var displayDate = dayName + " " + monthName + " " + d.getDate() + ", " + year
     if post._embedded['wp:featuredmedia']
         div(class="uk-text-center uk-margin-remove-top uk-width-expand")
-            img(data-src=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url}` style="width: 100%" alt=`${post._embedded['wp:featuredmedia'][0].alt_text}` uk-img uk-parallax='y: -160; opacity: 1,0;')
+            img(data-src=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}` style="width: 100%" alt=`${post._embedded['wp:featuredmedia'][0].alt_text}` uk-img uk-parallax='y: -160; opacity: 1,0;')
     div(class="uk-container uk-container-xsmall uk-padding ")
         article.uk-article
             h1.uk-article-title!=post.title.rendered
@@ -69,7 +69,7 @@ block content
                 |  on 
                 =displayDate
             //if post._embedded['wp:featuredmedia']
-            //    img(data-src=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url}` alt=`${post._embedded['wp:featuredmedia'][0].alt_text}` uk-img)
+            //    img(data-src=`${post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}` alt=`${post._embedded['wp:featuredmedia'][0].alt_text}` uk-img)
             p!=post.content.rendered
         div(class="uk-card uk-card-secondary  uk-padding-small")
             div(class="uk-card-header uk-padding-small")

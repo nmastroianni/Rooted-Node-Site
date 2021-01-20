@@ -2,8 +2,8 @@
     "locations": [{
         "name": "Marlton Pike",
         "shortname": "marlton-pike",
-        "blurb": "Located behind PJ Whelehan's on Route 70. There are 5 offices in this first floor suite.",
-        "address": "1878 East Marlton Pike Suite 2",
+        "blurb": "Located near the PJ Whelehan's on Route 70. Our first floor location features handicap access and ample parking.",
+        "address": "1878 East Marlton Pike Suite 5",
         "city": "Cherry Hill",
         "zip": "08003",
         "county": "Camden",
@@ -12,18 +12,5 @@
         "googleMapsURL": "https://goo.gl/maps/9zLAT2be641d8hfy5",
         "appleMapsURL": "https://maps.apple.com/?daddress=1878%20NJ-70%20W,%20Unit%202,%20Cherry%20Hill,%20NJ%20%2008003,%20United%20States&auid=2696797831587769476&ll=39.904624,-74.969485&lsp=9902&q=Rooted%20Psychotherapy%20and%20Counseling&_ext=ChkKBQgEEOIBCgQIBRADCgQIBhByCgQIChAAEiYpbyR1mDbzQ0AxB+f1v2y+UsA57fma9Fz0Q0BBw01J46y9UsBQAw%3D%3D&t=m",
         "embedCode": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.6437086870374!2d-74.97167078461959!3d39.90460867942799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6cb4d6c0be2f9%3A0x4f7daa569ea95c71!2s1878%20NJ-70%20%232%2C%20Cherry%20Hill%2C%20NJ%2008003!5e0!3m2!1sen!2sus!4v1587925649987!5m2!1sen!2sus\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\" uk-responsive></iframe>"
-    },{
-        "name": "Kresson Road",
-        "shortname": "kresson-road",
-        "blurb": "",
-        "address": "36 Kresson Road Suite D",
-        "city": "Cherry Hill",
-        "zip": "08034",
-        "county": "Camden",
-        "state": "New Jersey",
-        "image": "",
-        "googleMapsURL": "https://goo.gl/maps/B21DGiGRrNqPYxB27",
-        "appleMapsURL": "https://maps.apple.com/?daddress=36%20Kresson%20Rd,%20Cherry%20Hill,%20NJ%20%2008034,%20United%20States&ll=39.894096,-75.021733&q=36%20Kresson%20Rd&_ext=EiYprhPyjd7xQ0AxO47N/cPBUsA5LOkX6gTzQ0BBlVCnKATBUsBQAw%3D%3D&t=m",
-        "embedCode": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.111109299663!2d-75.02410208461997!3d39.89414457942923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6cc7bbf796e21%3A0xcc9743541ca6aec3!2s36%20Kresson%20Rd%20Suite%20D%2C%20Cherry%20Hill%2C%20NJ%2008034!5e0!3m2!1sen!2sus!4v1587925780562!5m2!1sen!2sus\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\" uk-responsive></iframe>"
     }]
 }
